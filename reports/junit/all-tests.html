@@ -1,0 +1,1184 @@
+<html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Unit Test Results: All Tests</title>
+<link rel="stylesheet" type="text/css" title="Style" href="stylesheet.css">
+</head>
+<body onload="open('allclasses-frame.html','classListFrame')">
+<h1>Unit Test Results.</h1>
+<table width="100%">
+<tr>
+<td align="left"></td><td align="right">Designed for use with <a href="http://www.junit.org/">JUnit</a> and <a href="http://ant.apache.org/">Ant</a>.</td>
+</tr>
+</table>
+<hr size="1">
+<h2>All Tests</h2>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Class</th><th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/domain/0_BeanTest.html">BeanTest</a></td><td><a name="testAllReadWriteProperties"></a><a href="com/ibatis/jpetstore/domain/0_BeanTest.html#testAllReadWriteProperties">testAllReadWriteProperties</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getConstructor0(Class.java:3075)<br>	at java.lang.Class.newInstance(Class.java:412)<br>	at com.ibatis.jpetstore.domain.BeanTest.testAllReadWriteProperties(BeanTest.java:37)<br>
+</code></td><td>0.047</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/1_AccountDaoTest.html">AccountDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/1_AccountDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldFindDefaultUserAccountByUsernameAndPassword (java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.persistence.DaoConfig.&lt;init&gt;()V&#13;
+	at com.ibatis.jpetstore.persistence.PersistenceFixture.&lt;clinit&gt;(PersistenceFixture.java:27)&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.AccountDaoTest.&lt;init&gt;(AccountDaoTest.java:7)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldFindDefaultUserAccountByUsernameAndPassword (java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.persistence.DaoConfig.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.persistence.PersistenceFixture.&lt;clinit&gt;(PersistenceFixture.java:27)<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.AccountDaoTest.&lt;init&gt;(AccountDaoTest.java:7)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.047</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/1_AccountDaoTest.html">AccountDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/1_AccountDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldFindDefaultUserAccountByUsername (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.AccountDaoTest.&lt;init&gt;(AccountDaoTest.java:7)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldFindDefaultUserAccountByUsername (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.AccountDaoTest.&lt;init&gt;(AccountDaoTest.java:7)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.015</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/1_AccountDaoTest.html">AccountDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/1_AccountDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldUpdateAccountEmailAddress (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.AccountDaoTest.&lt;init&gt;(AccountDaoTest.java:7)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldUpdateAccountEmailAddress (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.AccountDaoTest.&lt;init&gt;(AccountDaoTest.java:7)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/1_AccountDaoTest.html">AccountDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/1_AccountDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldInsertNewAccount (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.AccountDaoTest.&lt;init&gt;(AccountDaoTest.java:7)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldInsertNewAccount (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.AccountDaoTest.&lt;init&gt;(AccountDaoTest.java:7)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/1_AccountDaoTest.html">AccountDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/1_AccountDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testDummy (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.AccountDaoTest.&lt;init&gt;(AccountDaoTest.java:7)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testDummy (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.AccountDaoTest.&lt;init&gt;(AccountDaoTest.java:7)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/2_BasePersistenceTest.html">BasePersistenceTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/2_BasePersistenceTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testDummy (java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.persistence.DaoConfig.&lt;init&gt;()V&#13;
+	at com.ibatis.jpetstore.persistence.PersistenceFixture.&lt;clinit&gt;(PersistenceFixture.java:27)&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testDummy (java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.persistence.DaoConfig.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.persistence.PersistenceFixture.&lt;clinit&gt;(PersistenceFixture.java:27)<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.047</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/3_CategoryDaoTest.html">CategoryDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/3_CategoryDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldVerifyCategoryListContainsFiveItems (java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.persistence.DaoConfig.&lt;init&gt;()V&#13;
+	at com.ibatis.jpetstore.persistence.PersistenceFixture.&lt;clinit&gt;(PersistenceFixture.java:27)&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.CategoryDaoTest.&lt;init&gt;(CategoryDaoTest.java:5)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldVerifyCategoryListContainsFiveItems (java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.persistence.DaoConfig.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.persistence.PersistenceFixture.&lt;clinit&gt;(PersistenceFixture.java:27)<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.CategoryDaoTest.&lt;init&gt;(CategoryDaoTest.java:5)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.047</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/3_CategoryDaoTest.html">CategoryDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/3_CategoryDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldFindCategoryByID (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.CategoryDaoTest.&lt;init&gt;(CategoryDaoTest.java:5)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldFindCategoryByID (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.CategoryDaoTest.&lt;init&gt;(CategoryDaoTest.java:5)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.016</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/3_CategoryDaoTest.html">CategoryDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/3_CategoryDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testDummy (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.CategoryDaoTest.&lt;init&gt;(CategoryDaoTest.java:5)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testDummy (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.CategoryDaoTest.&lt;init&gt;(CategoryDaoTest.java:5)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/4_ItemDaoTest.html">ItemDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/4_ItemDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldListTwoItemsForGivenProduct (java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.persistence.DaoConfig.&lt;init&gt;()V&#13;
+	at com.ibatis.jpetstore.persistence.PersistenceFixture.&lt;clinit&gt;(PersistenceFixture.java:27)&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.ItemDaoTest.&lt;init&gt;(ItemDaoTest.java:9)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldListTwoItemsForGivenProduct (java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.persistence.DaoConfig.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.persistence.PersistenceFixture.&lt;clinit&gt;(PersistenceFixture.java:27)<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.ItemDaoTest.&lt;init&gt;(ItemDaoTest.java:9)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.046</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/4_ItemDaoTest.html">ItemDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/4_ItemDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldVerifyItemIsInStock (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.ItemDaoTest.&lt;init&gt;(ItemDaoTest.java:9)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldVerifyItemIsInStock (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.ItemDaoTest.&lt;init&gt;(ItemDaoTest.java:9)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.031</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/4_ItemDaoTest.html">ItemDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/4_ItemDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldVerifyItemIsOutOfStock (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.ItemDaoTest.&lt;init&gt;(ItemDaoTest.java:9)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldVerifyItemIsOutOfStock (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.ItemDaoTest.&lt;init&gt;(ItemDaoTest.java:9)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/4_ItemDaoTest.html">ItemDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/4_ItemDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldUpdateInventoryForItem (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.ItemDaoTest.&lt;init&gt;(ItemDaoTest.java:9)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldUpdateInventoryForItem (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.ItemDaoTest.&lt;init&gt;(ItemDaoTest.java:9)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/4_ItemDaoTest.html">ItemDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/4_ItemDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldFindItemByID (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.ItemDaoTest.&lt;init&gt;(ItemDaoTest.java:9)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldFindItemByID (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.ItemDaoTest.&lt;init&gt;(ItemDaoTest.java:9)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/4_ItemDaoTest.html">ItemDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/4_ItemDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testDummy (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.ItemDaoTest.&lt;init&gt;(ItemDaoTest.java:9)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testDummy (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.ItemDaoTest.&lt;init&gt;(ItemDaoTest.java:9)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/5_OrderDaoTest.html">OrderDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/5_OrderDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldListASingleOrderForAUser (java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.persistence.DaoConfig.&lt;init&gt;()V&#13;
+	at com.ibatis.jpetstore.persistence.PersistenceFixture.&lt;clinit&gt;(PersistenceFixture.java:27)&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.OrderDaoTest.&lt;init&gt;(OrderDaoTest.java:9)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldListASingleOrderForAUser (java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.persistence.DaoConfig.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.persistence.PersistenceFixture.&lt;clinit&gt;(PersistenceFixture.java:27)<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.OrderDaoTest.&lt;init&gt;(OrderDaoTest.java:9)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.047</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/5_OrderDaoTest.html">OrderDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/5_OrderDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldInsertNewOrderWithLineItems (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.OrderDaoTest.&lt;init&gt;(OrderDaoTest.java:9)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldInsertNewOrderWithLineItems (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.OrderDaoTest.&lt;init&gt;(OrderDaoTest.java:9)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/5_OrderDaoTest.html">OrderDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/5_OrderDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testDummy (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.OrderDaoTest.&lt;init&gt;(OrderDaoTest.java:9)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testDummy (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.OrderDaoTest.&lt;init&gt;(OrderDaoTest.java:9)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/6_ProductDaoTest.html">ProductDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/6_ProductDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldFindSpecificProductByID (java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.persistence.DaoConfig.&lt;init&gt;()V&#13;
+	at com.ibatis.jpetstore.persistence.PersistenceFixture.&lt;clinit&gt;(PersistenceFixture.java:27)&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.ProductDaoTest.&lt;init&gt;(ProductDaoTest.java:5)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldFindSpecificProductByID (java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.persistence.DaoConfig.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.persistence.PersistenceFixture.&lt;clinit&gt;(PersistenceFixture.java:27)<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.ProductDaoTest.&lt;init&gt;(ProductDaoTest.java:5)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.047</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/6_ProductDaoTest.html">ProductDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/6_ProductDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldFindAllProductsContainingKeyword (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.ProductDaoTest.&lt;init&gt;(ProductDaoTest.java:5)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldFindAllProductsContainingKeyword (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.ProductDaoTest.&lt;init&gt;(ProductDaoTest.java:5)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.015</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/6_ProductDaoTest.html">ProductDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/6_ProductDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testShouldListProductsForACategory (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.ProductDaoTest.&lt;init&gt;(ProductDaoTest.java:5)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testShouldListProductsForACategory (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.ProductDaoTest.&lt;init&gt;(ProductDaoTest.java:5)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/6_ProductDaoTest.html">ProductDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/6_ProductDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testDummy (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.ProductDaoTest.&lt;init&gt;(ProductDaoTest.java:5)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testDummy (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.ProductDaoTest.&lt;init&gt;(ProductDaoTest.java:5)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/7_SequenceDaoTest.html">SequenceDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/7_SequenceDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testSequenceShouldReturnIncrementalIdNumbers (java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.persistence.DaoConfig.&lt;init&gt;()V&#13;
+	at com.ibatis.jpetstore.persistence.PersistenceFixture.&lt;clinit&gt;(PersistenceFixture.java:27)&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.SequenceDaoTest.&lt;init&gt;(SequenceDaoTest.java:5)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testSequenceShouldReturnIncrementalIdNumbers (java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.persistence.DaoConfig.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.persistence.PersistenceFixture.&lt;clinit&gt;(PersistenceFixture.java:27)<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.SequenceDaoTest.&lt;init&gt;(SequenceDaoTest.java:5)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.062</td>
+</tr>
+<tr valign="top" class="Failure">
+<td><a href="com/ibatis/jpetstore/persistence/7_SequenceDaoTest.html">SequenceDaoTest</a></td><td><a name="warning"></a><a href="com/ibatis/jpetstore/persistence/7_SequenceDaoTest.html#warning">warning</a></td><td>Failure</td><td>Exception in constructor: testDummy (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture&#13;
+	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)&#13;
+	at com.ibatis.jpetstore.persistence.SequenceDaoTest.&lt;init&gt;(SequenceDaoTest.java:5)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;
+	at junit.framework.TestSuite.createTest(TestSuite.java:61)&#13;
+	at junit.framework.TestSuite.addTestMethod(TestSuite.java:283)&#13;
+	at junit.framework.TestSuite.&lt;init&gt;(TestSuite.java:146)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:500)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1182)&#13;
+	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1033)&#13;
+)<br>
+<br>
+<code>junit.framework.AssertionFailedError: Exception in constructor: testDummy (java.lang.NoClassDefFoundError: Could not initialize class com.ibatis.jpetstore.persistence.PersistenceFixture<br>	at com.ibatis.jpetstore.persistence.BasePersistenceTest.&lt;init&gt;(BasePersistenceTest.java:7)<br>	at com.ibatis.jpetstore.persistence.SequenceDaoTest.&lt;init&gt;(SequenceDaoTest.java:5)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html">AccountBeanTest</a></td><td><a name="testShouldSuccessfullyCallServicesToUpdateExistingAccount"></a><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html#testShouldSuccessfullyCallServicesToUpdateExistingAccount">testShouldSuccessfullyCallServicesToUpdateExistingAccount</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.domain.DomainFixture.newTestAccount(DomainFixture.java:9)<br>	at com.ibatis.jpetstore.presentation.AccountBeanTest.testShouldSuccessfullyCallServicesToUpdateExistingAccount(AccountBeanTest.java:44)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.047</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html">AccountBeanTest</a></td><td><a name="testShouldSuccessfullyCallServicesToCreateNewAccount"></a><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html#testShouldSuccessfullyCallServicesToCreateNewAccount">testShouldSuccessfullyCallServicesToCreateNewAccount</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.domain.DomainFixture.newTestAccount(DomainFixture.java:9)<br>	at com.ibatis.jpetstore.presentation.AccountBeanTest.testShouldSuccessfullyCallServicesToCreateNewAccount(AccountBeanTest.java:16)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html">AccountBeanTest</a></td><td><a name="testShouldCallEditAccountFormReturningSuccess"></a><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html#testShouldCallEditAccountFormReturningSuccess">testShouldCallEditAccountFormReturningSuccess</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.domain.DomainFixture.newTestAccount(DomainFixture.java:9)<br>	at com.ibatis.jpetstore.presentation.AccountBeanTest.testShouldCallEditAccountFormReturningSuccess(AccountBeanTest.java:72)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html">AccountBeanTest</a></td><td><a name="testShouldResetBooleanOptions"></a><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html#testShouldResetBooleanOptions">testShouldResetBooleanOptions</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.presentation.AbstractBean.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.presentation.AbstractBean.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.presentation.AccountBeanTest.testShouldResetBooleanOptions(AccountBeanTest.java:166)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.078</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html">AccountBeanTest</a></td><td><a name="testShouldClearAccountBean"></a><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html#testShouldClearAccountBean">testShouldClearAccountBean</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052c 0304 54b1               
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052c 0304 54b1               <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.AccountBeanTest.testShouldClearAccountBean(AccountBeanTest.java:176)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.657</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html">AccountBeanTest</a></td><td><a name="testShouldGetCategories"></a><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html#testShouldGetCategories">testShouldGetCategories</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.presentation.AbstractBean.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.presentation.AbstractBean.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.presentation.AccountBeanTest.testShouldGetCategories(AccountBeanTest.java:149)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html">AccountBeanTest</a></td><td><a name="testShouldSignoffAccount"></a><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html#testShouldSignoffAccount">testShouldSignoffAccount</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.domain.DomainFixture.newTestAccount(DomainFixture.java:9)<br>	at com.ibatis.jpetstore.presentation.AccountBeanTest.testShouldSignoffAccount(AccountBeanTest.java:98)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html">AccountBeanTest</a></td><td><a name="testShouldGetLanguages"></a><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html#testShouldGetLanguages">testShouldGetLanguages</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.presentation.AbstractBean.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.presentation.AbstractBean.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.presentation.AccountBeanTest.testShouldGetLanguages(AccountBeanTest.java:159)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html">AccountBeanTest</a></td><td><a name="testShouldSwitchPageDirection"></a><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html#testShouldSwitchPageDirection">testShouldSwitchPageDirection</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.domain.DomainFixture.newTestAccount(DomainFixture.java:9)<br>	at com.ibatis.jpetstore.presentation.AccountBeanTest.testShouldSwitchPageDirection(AccountBeanTest.java:85)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.015</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html">AccountBeanTest</a></td><td><a name="testShouldFailToSignonAccount"></a><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html#testShouldFailToSignonAccount">testShouldFailToSignonAccount</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.domain.DomainFixture.newTestAccount(DomainFixture.java:9)<br>	at com.ibatis.jpetstore.presentation.AccountBeanTest.testShouldFailToSignonAccount(AccountBeanTest.java:136)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html">AccountBeanTest</a></td><td><a name="testShouldSignonAccount"></a><a href="com/ibatis/jpetstore/presentation/8_AccountBeanTest.html#testShouldSignonAccount">testShouldSignonAccount</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.domain.DomainFixture.newTestAccount(DomainFixture.java:9)<br>	at com.ibatis.jpetstore.presentation.AccountBeanTest.testShouldSignonAccount(AccountBeanTest.java:118)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/9_CartBeanTest.html">CartBeanTest</a></td><td><a name="testShouldSuccessfullyReturnFromViewCart"></a><a href="com/ibatis/jpetstore/presentation/9_CartBeanTest.html#testShouldSuccessfullyReturnFromViewCart">testShouldSuccessfullyReturnFromViewCart</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CartBeanTest.testShouldSuccessfullyReturnFromViewCart(CartBeanTest.java:14)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.422</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/9_CartBeanTest.html">CartBeanTest</a></td><td><a name="testShouldSwitchPagesBackAndForth"></a><a href="com/ibatis/jpetstore/presentation/9_CartBeanTest.html#testShouldSwitchPagesBackAndForth">testShouldSwitchPagesBackAndForth</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CartBeanTest.testShouldSwitchPagesBackAndForth(CartBeanTest.java:20)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.015</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/9_CartBeanTest.html">CartBeanTest</a></td><td><a name="testShouldFailToRemoveItemFromCart"></a><a href="com/ibatis/jpetstore/presentation/9_CartBeanTest.html#testShouldFailToRemoveItemFromCart">testShouldFailToRemoveItemFromCart</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CartBeanTest.testShouldFailToRemoveItemFromCart(CartBeanTest.java:73)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/9_CartBeanTest.html">CartBeanTest</a></td><td><a name="testShouldClearAllCartData"></a><a href="com/ibatis/jpetstore/presentation/9_CartBeanTest.html#testShouldClearAllCartData">testShouldClearAllCartData</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CartBeanTest.testShouldClearAllCartData(CartBeanTest.java:39)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/9_CartBeanTest.html">CartBeanTest</a></td><td><a name="testShouldAddItemToCart"></a><a href="com/ibatis/jpetstore/presentation/9_CartBeanTest.html#testShouldAddItemToCart">testShouldAddItemToCart</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CartBeanTest.testShouldAddItemToCart(CartBeanTest.java:52)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.016</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/9_CartBeanTest.html">CartBeanTest</a></td><td><a name="testShouldRemoveItemFromCart"></a><a href="com/ibatis/jpetstore/presentation/9_CartBeanTest.html#testShouldRemoveItemFromCart">testShouldRemoveItemFromCart</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CartBeanTest.testShouldRemoveItemFromCart(CartBeanTest.java:80)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/9_CartBeanTest.html">CartBeanTest</a></td><td><a name="testShouldUpdateCartQuantities"></a><a href="com/ibatis/jpetstore/presentation/9_CartBeanTest.html#testShouldUpdateCartQuantities">testShouldUpdateCartQuantities</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CartBeanTest.testShouldUpdateCartQuantities(CartBeanTest.java:98)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html">CatalogBeanTest</a></td><td><a name="testShouldPopulateProductByIdForViewing"></a><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html#testShouldPopulateProductByIdForViewing">testShouldPopulateProductByIdForViewing</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CatalogBeanTest.testShouldPopulateProductByIdForViewing(CatalogBeanTest.java:32)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.313</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html">CatalogBeanTest</a></td><td><a name="testShouldPopulateItemByIdForViewing"></a><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html#testShouldPopulateItemByIdForViewing">testShouldPopulateItemByIdForViewing</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CatalogBeanTest.testShouldPopulateItemByIdForViewing(CatalogBeanTest.java:49)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.015</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html">CatalogBeanTest</a></td><td><a name="testShouldPopulateCategoryByIdForViewing"></a><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html#testShouldPopulateCategoryByIdForViewing">testShouldPopulateCategoryByIdForViewing</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CatalogBeanTest.testShouldPopulateCategoryByIdForViewing(CatalogBeanTest.java:15)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html">CatalogBeanTest</a></td><td><a name="testShouldSearchProductsByKeyword"></a><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html#testShouldSearchProductsByKeyword">testShouldSearchProductsByKeyword</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CatalogBeanTest.testShouldSearchProductsByKeyword(CatalogBeanTest.java:69)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html">CatalogBeanTest</a></td><td><a name="testShouldSwitchItemPageBackAndForth"></a><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html#testShouldSwitchItemPageBackAndForth">testShouldSwitchItemPageBackAndForth</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CatalogBeanTest.testShouldSwitchItemPageBackAndForth(CatalogBeanTest.java:100)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html">CatalogBeanTest</a></td><td><a name="testShouldSwitchProductPageBackAndForth"></a><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html#testShouldSwitchProductPageBackAndForth">testShouldSwitchProductPageBackAndForth</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CatalogBeanTest.testShouldSwitchProductPageBackAndForth(CatalogBeanTest.java:81)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.016</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html">CatalogBeanTest</a></td><td><a name="testShouldFailToSearchProducts"></a><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html#testShouldFailToSearchProducts">testShouldFailToSearchProducts</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CatalogBeanTest.testShouldFailToSearchProducts(CatalogBeanTest.java:61)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html">CatalogBeanTest</a></td><td><a name="testShouldClearCatalogBean"></a><a href="com/ibatis/jpetstore/presentation/10_CatalogBeanTest.html#testShouldClearCatalogBean">testShouldClearCatalogBean</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.CatalogBeanTest.testShouldClearCatalogBean(CatalogBeanTest.java:119)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html">OrderBeanTest</a></td><td><a name="testShouldConfirmationBeforeNewOrder"></a><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html#testShouldConfirmationBeforeNewOrder">testShouldConfirmationBeforeNewOrder</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052c 0304 54b1               
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052c 0304 54b1               <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.OrderBeanTest.testShouldConfirmationBeforeNewOrder(OrderBeanTest.java:205)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.391</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html">OrderBeanTest</a></td><td><a name="testShouldSuccessfullyCreateNewOrder"></a><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html#testShouldSuccessfullyCreateNewOrder">testShouldSuccessfullyCreateNewOrder</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.presentation.AbstractBean.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.presentation.AbstractBean.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.presentation.OrderBeanTest.testShouldSuccessfullyCreateNewOrder(OrderBeanTest.java:223)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.078</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html">OrderBeanTest</a></td><td><a name="testShouldSwitchOrderListPagesBackAndForth"></a><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html#testShouldSwitchOrderListPagesBackAndForth">testShouldSwitchOrderListPagesBackAndForth</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052c 0304 54b1               
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052c 0304 54b1               <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.OrderBeanTest.testShouldSwitchOrderListPagesBackAndForth(OrderBeanTest.java:48)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html">OrderBeanTest</a></td><td><a name="testShouldFailToViewOrderDueToMismatchedUsername"></a><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html#testShouldFailToViewOrderDueToMismatchedUsername">testShouldFailToViewOrderDueToMismatchedUsername</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.presentation.AbstractBean.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.presentation.AbstractBean.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.presentation.OrderBeanTest.testShouldFailToViewOrderDueToMismatchedUsername(OrderBeanTest.java:121)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html">OrderBeanTest</a></td><td><a name="testShouldResetShippingAddressRequirement"></a><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html#testShouldResetShippingAddressRequirement">testShouldResetShippingAddressRequirement</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052c 0304 54b1               
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052c 0304 54b1               <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.OrderBeanTest.testShouldResetShippingAddressRequirement(OrderBeanTest.java:73)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html">OrderBeanTest</a></td><td><a name="testShouldRequireShippingAddressBeforeNewOrder"></a><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html#testShouldRequireShippingAddressBeforeNewOrder">testShouldRequireShippingAddressBeforeNewOrder</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052c 0304 54b1               
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052c 0304 54b1               <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.OrderBeanTest.testShouldRequireShippingAddressBeforeNewOrder(OrderBeanTest.java:197)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.016</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html">OrderBeanTest</a></td><td><a name="testShouldFaileDueToMissingNewOrder"></a><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html#testShouldFaileDueToMissingNewOrder">testShouldFaileDueToMissingNewOrder</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052c 0304 54b1               
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052c 0304 54b1               <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.OrderBeanTest.testShouldFaileDueToMissingNewOrder(OrderBeanTest.java:213)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html">OrderBeanTest</a></td><td><a name="testShouldSuccessfullyViewOrder"></a><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html#testShouldSuccessfullyViewOrder">testShouldSuccessfullyViewOrder</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.presentation.AbstractBean.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.presentation.AbstractBean.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.presentation.OrderBeanTest.testShouldSuccessfullyViewOrder(OrderBeanTest.java:101)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html">OrderBeanTest</a></td><td><a name="testShouldClearAllFields"></a><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html#testShouldClearAllFields">testShouldClearAllFields</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052c 0304 54b1               
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052c 0304 54b1               <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.OrderBeanTest.testShouldClearAllFields(OrderBeanTest.java:82)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.015</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html">OrderBeanTest</a></td><td><a name="testShouldGetCardTypes"></a><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html#testShouldGetCardTypes">testShouldGetCardTypes</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052c 0304 54b1               
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052c 0304 54b1               <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.OrderBeanTest.testShouldGetCardTypes(OrderBeanTest.java:20)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html">OrderBeanTest</a></td><td><a name="testSuccessfullyViewCart"></a><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html#testSuccessfullyViewCart">testSuccessfullyViewCart</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.domain.DomainFixture.newTestAccount(DomainFixture.java:9)<br>	at com.ibatis.jpetstore.presentation.OrderBeanTest.testSuccessfullyViewCart(OrderBeanTest.java:171)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html">OrderBeanTest</a></td><td><a name="testShouldFailDueToAMissingCart"></a><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html#testShouldFailDueToAMissingCart">testShouldFailDueToAMissingCart</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.domain.DomainFixture.newTestAccount(DomainFixture.java:9)<br>	at com.ibatis.jpetstore.presentation.OrderBeanTest.testShouldFailDueToAMissingCart(OrderBeanTest.java:147)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html">OrderBeanTest</a></td><td><a name="testListListOrdersByUsername"></a><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html#testListListOrdersByUsername">testListListOrdersByUsername</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052c 0304 54b1               
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052c 0304 54b1               <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.OrderBeanTest.testListListOrdersByUsername(OrderBeanTest.java:28)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html">OrderBeanTest</a></td><td><a name="testShouldForceSignonWhenAttemptingToCreateANewOrderWithoutBeingSignedIn"></a><a href="com/ibatis/jpetstore/presentation/11_OrderBeanTest.html#testShouldForceSignonWhenAttemptingToCreateANewOrderWithoutBeingSignedIn">testShouldForceSignonWhenAttemptingToCreateANewOrderWithoutBeingSignedIn</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052c 0304 54b1               
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/AccountService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 3c59 c700 0757 b800 4603 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052c 0304 54b1               <br>
+<br>	at java.lang.Class.getDeclaredConstructors0(Native Method)<br>	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2671)<br>	at java.lang.Class.getDeclaredConstructors(Class.java:2020)<br>	at net.sf.cglib.proxy.Enhancer.generateClass(Enhancer.java:447)<br>	at net.sf.cglib.core.DefaultGeneratorStrategy.generate(DefaultGeneratorStrategy.java:25)<br>	at net.sf.cglib.core.AbstractClassGenerator.create(AbstractClassGenerator.java:216)<br>	at net.sf.cglib.proxy.Enhancer.createHelper(Enhancer.java:377)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:285)<br>	at net.sf.cglib.proxy.Enhancer.create(Enhancer.java:660)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.CGLIBCoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.cglib.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.presentation.OrderBeanTest.testShouldForceSignonWhenAttemptingToCreateANewOrderWithoutBeingSignedIn(OrderBeanTest.java:140)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/12_AccountServiceTest.html">AccountServiceTest</a></td><td><a name="testShouldVerifyGetAccountIsCalledByUsername"></a><a href="com/ibatis/jpetstore/service/12_AccountServiceTest.html#testShouldVerifyGetAccountIsCalledByUsername">testShouldVerifyGetAccountIsCalledByUsername</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Account.&lt;init&gt;()V<br>	at java.lang.Class.forName0(Native Method)<br>	at java.lang.Class.forName(Class.java:264)<br>	at com.sun.proxy.$Proxy0.&lt;clinit&gt;(Unknown Source)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>	at java.lang.reflect.Proxy.newProxyInstance(Proxy.java:739)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.service.AccountServiceTest.testShouldVerifyGetAccountIsCalledByUsername(AccountServiceTest.java:12)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.516</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/12_AccountServiceTest.html">AccountServiceTest</a></td><td><a name="testShouldVerifyInsertAccountIsCalled"></a><a href="com/ibatis/jpetstore/service/12_AccountServiceTest.html#testShouldVerifyInsertAccountIsCalled">testShouldVerifyInsertAccountIsCalled</a></td><td>Error</td><td>Could not initialize class com.sun.proxy.$Proxy0<br>
+<br>
+<code>java.lang.NoClassDefFoundError: Could not initialize class com.sun.proxy.$Proxy0<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>	at java.lang.reflect.Proxy.newProxyInstance(Proxy.java:739)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.service.AccountServiceTest.testShouldVerifyInsertAccountIsCalled(AccountServiceTest.java:36)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.016</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/12_AccountServiceTest.html">AccountServiceTest</a></td><td><a name="testShouldVerifyUpdateAccountIsCalled"></a><a href="com/ibatis/jpetstore/service/12_AccountServiceTest.html#testShouldVerifyUpdateAccountIsCalled">testShouldVerifyUpdateAccountIsCalled</a></td><td>Error</td><td>Could not initialize class com.sun.proxy.$Proxy0<br>
+<br>
+<code>java.lang.NoClassDefFoundError: Could not initialize class com.sun.proxy.$Proxy0<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>	at java.lang.reflect.Proxy.newProxyInstance(Proxy.java:739)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.service.AccountServiceTest.testShouldVerifyUpdateAccountIsCalled(AccountServiceTest.java:47)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/12_AccountServiceTest.html">AccountServiceTest</a></td><td><a name="testShouldVerifyGetAccountIsCalledByUsernameAndPassword"></a><a href="com/ibatis/jpetstore/service/12_AccountServiceTest.html#testShouldVerifyGetAccountIsCalledByUsernameAndPassword">testShouldVerifyGetAccountIsCalledByUsernameAndPassword</a></td><td>Error</td><td>Could not initialize class com.sun.proxy.$Proxy0<br>
+<br>
+<code>java.lang.NoClassDefFoundError: Could not initialize class com.sun.proxy.$Proxy0<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>	at java.lang.reflect.Proxy.newProxyInstance(Proxy.java:739)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.service.AccountServiceTest.testShouldVerifyGetAccountIsCalledByUsernameAndPassword(AccountServiceTest.java:24)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html">CatalogServiceTest</a></td><td><a name="testShouldCallGetCategoryOnCategoryDao"></a><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html#testShouldCallGetCategoryOnCategoryDao">testShouldCallGetCategoryOnCategoryDao</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Category.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Category.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.service.CatalogServiceTest.testShouldCallGetCategoryOnCategoryDao(CatalogServiceTest.java:23)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.156</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html">CatalogServiceTest</a></td><td><a name="testShouldCallGetProductOnProductDao"></a><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html#testShouldCallGetProductOnProductDao">testShouldCallGetProductOnProductDao</a></td><td>Error</td><td>Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Product.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 5 in method com.ibatis.jpetstore.domain.Product.&lt;init&gt;()V<br>	at com.ibatis.jpetstore.service.CatalogServiceTest.testShouldCallGetProductOnProductDao(CatalogServiceTest.java:78)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.031</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html">CatalogServiceTest</a></td><td><a name="testCallSearchProductsOnProductDao"></a><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html#testCallSearchProductsOnProductDao">testCallSearchProductsOnProductDao</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at com.ibatis.jpetstore.service.CatalogServiceTest.testCallSearchProductsOnProductDao(CatalogServiceTest.java:122)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.016</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html">CatalogServiceTest</a></td><td><a name="testShouldCallGetCategoryListOnCategoryDao"></a><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html#testShouldCallGetCategoryListOnCategoryDao">testShouldCallGetCategoryListOnCategoryDao</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at com.ibatis.jpetstore.service.CatalogServiceTest.testShouldCallGetCategoryListOnCategoryDao(CatalogServiceTest.java:40)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html">CatalogServiceTest</a></td><td><a name="testShouldCallGetItemListByProductOnItemDao"></a><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html#testShouldCallGetItemListByProductOnItemDao">testShouldCallGetItemListByProductOnItemDao</a></td><td>Error</td><td>Illegal local variable table length 16 in method com.ibatis.jpetstore.domain.Order.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 16 in method com.ibatis.jpetstore.domain.Order.&lt;init&gt;()V<br>	at java.lang.Class.forName0(Native Method)<br>	at java.lang.Class.forName(Class.java:264)<br>	at com.sun.proxy.$Proxy2.&lt;clinit&gt;(Unknown Source)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>	at java.lang.reflect.Proxy.newProxyInstance(Proxy.java:739)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.service.CatalogServiceTest.testShouldCallGetItemListByProductOnItemDao(CatalogServiceTest.java:60)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html">CatalogServiceTest</a></td><td><a name="testShouldCallGetItemOnItemDao"></a><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html#testShouldCallGetItemOnItemDao">testShouldCallGetItemOnItemDao</a></td><td>Error</td><td>Could not initialize class com.sun.proxy.$Proxy2<br>
+<br>
+<code>java.lang.NoClassDefFoundError: Could not initialize class com.sun.proxy.$Proxy2<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>	at java.lang.reflect.Proxy.newProxyInstance(Proxy.java:739)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.service.CatalogServiceTest.testShouldCallGetItemOnItemDao(CatalogServiceTest.java:46)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.016</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html">CatalogServiceTest</a></td><td><a name="testShouldFindProductIsInStock"></a><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html#testShouldFindProductIsInStock">testShouldFindProductIsInStock</a></td><td>Error</td><td>Could not initialize class com.sun.proxy.$Proxy2<br>
+<br>
+<code>java.lang.NoClassDefFoundError: Could not initialize class com.sun.proxy.$Proxy2<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>	at java.lang.reflect.Proxy.newProxyInstance(Proxy.java:739)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.service.CatalogServiceTest.testShouldFindProductIsInStock(CatalogServiceTest.java:101)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html">CatalogServiceTest</a></td><td><a name="testShouldCallGetProductListByCategoryOnProductDao"></a><a href="com/ibatis/jpetstore/service/13_CatalogServiceTest.html#testShouldCallGetProductListByCategoryOnProductDao">testShouldCallGetProductListByCategoryOnProductDao</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7
+    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0
+    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000
+    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008
+    0x0000040: b500 092c 0304 54b1                    
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/CatalogService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 5859 c700 0757 b800 6203 324d 2ab7<br>    0x0000010: 0001 b800 024c 2a2b 1203 b900 0402 00c0<br>    0x0000020: 0003 b500 052a 2b12 06b9 0004 0200 c000<br>    0x0000030: 06b5 0007 2a2b 1208 b900 0402 00c0 0008<br>    0x0000040: b500 092c 0304 54b1                    <br>
+<br>	at com.ibatis.jpetstore.service.CatalogServiceTest.testShouldCallGetProductListByCategoryOnProductDao(CatalogServiceTest.java:95)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/14_OrderServiceTest.html">OrderServiceTest</a></td><td><a name="testShouldCallGetNextIdOnSequenceDao"></a><a href="com/ibatis/jpetstore/service/14_OrderServiceTest.html#testShouldCallGetNextIdOnSequenceDao">testShouldCallGetNextIdOnSequenceDao</a></td><td>Error</td><td>Expecting a stackmap frame at branch target 11
+Exception Details:
+  Location:
+    com/ibatis/jpetstore/service/OrderService.&lt;init&gt;()V @4: ifnonnull
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: b200 8659 c700 0757 b800 9003 324c 2ab7
+    0x0000010: 0001 2ab8 0002 b500 032a 2ab4 0003 1204
+    0x0000020: b900 0502 00c0 0004 b500 062a 2ab4 0003
+    0x0000030: 1207 b900 0502 00c0 0007 b500 082a 2ab4
+    0x0000040: 0003 1209 b900 0502 00c0 0009 b500 0a2b
+    0x0000050: 0304 54b1                              
+<br>
+<br>
+<code>java.lang.VerifyError: Expecting a stackmap frame at branch target 11<br>Exception Details:<br>  Location:<br>    com/ibatis/jpetstore/service/OrderService.&lt;init&gt;()V @4: ifnonnull<br>  Reason:<br>    Expected stackmap frame at this location.<br>  Bytecode:<br>    0x0000000: b200 8659 c700 0757 b800 9003 324c 2ab7<br>    0x0000010: 0001 2ab8 0002 b500 032a 2ab4 0003 1204<br>    0x0000020: b900 0502 00c0 0004 b500 062a 2ab4 0003<br>    0x0000030: 1207 b900 0502 00c0 0007 b500 082a 2ab4<br>    0x0000040: 0003 1209 b900 0502 00c0 0009 b500 0a2b<br>    0x0000050: 0304 54b1                              <br>
+<br>	at com.ibatis.jpetstore.service.OrderServiceTest.testShouldCallGetNextIdOnSequenceDao(OrderServiceTest.java:95)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.157</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/14_OrderServiceTest.html">OrderServiceTest</a></td><td><a name="testShouldCallGetOrdersByUsernameOnOrderDao"></a><a href="com/ibatis/jpetstore/service/14_OrderServiceTest.html#testShouldCallGetOrdersByUsernameOnOrderDao">testShouldCallGetOrdersByUsernameOnOrderDao</a></td><td>Error</td><td>Illegal local variable table length 16 in method com.ibatis.jpetstore.domain.Order.&lt;init&gt;()V<br>
+<br>
+<code>java.lang.ClassFormatError: Illegal local variable table length 16 in method com.ibatis.jpetstore.domain.Order.&lt;init&gt;()V<br>	at java.lang.Class.forName0(Native Method)<br>	at java.lang.Class.forName(Class.java:264)<br>	at com.sun.proxy.$Proxy1.&lt;clinit&gt;(Unknown Source)<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>	at java.lang.reflect.Proxy.newProxyInstance(Proxy.java:739)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.service.OrderServiceTest.testShouldCallGetOrdersByUsernameOnOrderDao(OrderServiceTest.java:42)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.031</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/14_OrderServiceTest.html">OrderServiceTest</a></td><td><a name="testShouldCallInsertOrderOnOrderDao"></a><a href="com/ibatis/jpetstore/service/14_OrderServiceTest.html#testShouldCallInsertOrderOnOrderDao">testShouldCallInsertOrderOnOrderDao</a></td><td>Error</td><td>Could not initialize class com.sun.proxy.$Proxy1<br>
+<br>
+<code>java.lang.NoClassDefFoundError: Could not initialize class com.sun.proxy.$Proxy1<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>	at java.lang.reflect.Proxy.newProxyInstance(Proxy.java:739)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.service.OrderServiceTest.testShouldCallInsertOrderOnOrderDao(OrderServiceTest.java:59)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.016</td>
+</tr>
+<tr valign="top" class="Error">
+<td><a href="com/ibatis/jpetstore/service/14_OrderServiceTest.html">OrderServiceTest</a></td><td><a name="testShouldCallGetOrderOnOrderDao"></a><a href="com/ibatis/jpetstore/service/14_OrderServiceTest.html#testShouldCallGetOrderOnOrderDao">testShouldCallGetOrderOnOrderDao</a></td><td>Error</td><td>Could not initialize class com.sun.proxy.$Proxy1<br>
+<br>
+<code>java.lang.NoClassDefFoundError: Could not initialize class com.sun.proxy.$Proxy1<br>	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)<br>	at java.lang.reflect.Proxy.newProxyInstance(Proxy.java:739)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.core.CoreMock.&lt;init&gt;(Unknown Source)<br>	at org.jmock.MockObjectTestCase.newCoreMock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at org.jmock.MockObjectTestCase.mock(Unknown Source)<br>	at com.ibatis.jpetstore.service.OrderServiceTest.testShouldCallGetOrderOnOrderDao(OrderServiceTest.java:17)<br>	at org.jmock.core.VerifyingTestCase.runBare(Unknown Source)<br>
+</code></td><td>0.000</td>
+</tr>
+</table>
+</body>
+</html>
