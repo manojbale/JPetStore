@@ -1,7 +1,5 @@
 node('any') {
-              {
-				stage('Checkout') {
+             stage('Checkout') {
 				checkout scm
-				}
-			  }
+			                   }
 			}
