@@ -1,5 +1,7 @@
 node {
              stage('Checkout') {
+				
+				sh '''git --version'''
 				checkout scm
 			                   }
 			}
