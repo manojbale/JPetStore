@@ -12,7 +12,7 @@ node
 				
 				sh 
 				'''
-				mvn -version
+				mvn --version
 				mvn clean install
 				'''
 				              }
