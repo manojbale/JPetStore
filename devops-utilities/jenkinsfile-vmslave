@@ -8,13 +8,14 @@ node ('master')
 			
 
 
-    stage('maven build step') {
-				
+    stage('maven build & SonarQubeScan') {
+	withSonarQubeEnv('sonarcloud') {
 				sh '''
 				mvn --version
-				mvn clean install
+				mvn clean install sonar:sonar
 				'''
-				              }
+				                   }
+								         }
 							  
 	stage ('move jpetstore.war to docker build workspace') {
 				sh '''
@@ -28,5 +29,14 @@ node ('master')
 				docker build -t jpetstore:$BUILD_NUMBER . --file dockerfile-jpetstore-image
 				'''
 				                }
+								
+	stage ('push jpetstore docker image') {
+	withDockerRegistry(credentialsId: 'Artifactorycloud', url: 'manojbale34-jpetstore-docker.jfrog.io') {
+	            sh '''
+				docker login manojbale34-jpetstore-docker.jfrog.io
+				docker tag jpetstore:$BUILD_NUMBER manojbale34-jpetstore-docker.jfrog.io/jpetstore:$BUILD_NUMBER
+				docker push manojbale34-jpetstore-docker.jfrog.io/jpetstore:$BUILD_NUMBER
+				                                                                                        }
+										  }
 
 }
