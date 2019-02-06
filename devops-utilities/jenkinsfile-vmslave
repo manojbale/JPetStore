@@ -22,7 +22,7 @@ node ('master')
 				'''
 				                                           }
 														   
-	stage ('build docker image' {
+	stage ('build docker image') {
 	            sh '''
 				cd devops-utilities/
 				docker build -t jpetstore:$BUILD_NUMBER .
