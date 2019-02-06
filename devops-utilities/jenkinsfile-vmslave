@@ -17,6 +17,14 @@ node ('master')
 				                   }
 								         }
 										 
+	stage('maven build') {
+	sh '''
+	mvn --version
+	mvn clean install
+	'''
+	                     }
+	
+										 
 										 
 							  
 	stage ('move jpetstore.war to docker build workspace') {
