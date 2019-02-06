@@ -43,7 +43,6 @@ node ('master')
 	stage ('push jpetstore docker image') {
 	withDockerRegistry(credentialsId: 'Artifactorycloud', url: 'https://manojbale34-jpetstore-docker.jfrog.io') {
 	            sh '''
-				docker login
 				docker tag jpetstore:$BUILD_NUMBER manojbale34-jpetstore-docker.jfrog.io/jpetstore:$BUILD_NUMBER
 				docker push manojbale34-jpetstore-docker.jfrog.io/jpetstore:$BUILD_NUMBER
 				'''
