@@ -8,14 +8,14 @@ node ('master')
 			
 
 
-    stage('maven build & SonarQubeScan') {
-	withSonarQubeEnv('sonarcloud') {
-				sh '''
-				mvn --version
-				mvn clean install sonar:sonar
-				'''
-				                   }
-								         }
+    #stage('maven build & SonarQubeScan') {
+	#withSonarQubeEnv('sonarcloud') {
+	#			sh '''
+	#			mvn --version
+	#			mvn clean install sonar:sonar
+	#			'''
+	#			                   }
+	#							         }
 										 
 	stage('maven build') {
 	sh '''
