@@ -16,6 +16,8 @@ node ('master')
 				'''
 				                   }
 								         }
+										 
+										 
 							  
 	stage ('move jpetstore.war to docker build workspace') {
 				sh '''
@@ -36,7 +38,7 @@ node ('master')
 				docker login manojbale34-jpetstore-docker.jfrog.io
 				docker tag jpetstore:$BUILD_NUMBER manojbale34-jpetstore-docker.jfrog.io/jpetstore:$BUILD_NUMBER
 				docker push manojbale34-jpetstore-docker.jfrog.io/jpetstore:$BUILD_NUMBER
+				'''
 				                                                                                        }
 										  }
-
 }
