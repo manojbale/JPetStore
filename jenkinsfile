@@ -1,7 +1,15 @@
-node ('jenkinsslave') {
-             stage('Checkout') {
+node ('jenkinsslave') 
+{
+    stage('Checkout') {
 				
 				sh '''git --version'''
 				checkout scm
-			                   }
-			}
+			          }
+			
+
+
+    stage('maven build step') {
+				
+				sh '''mvn -version'''
+				              }
+}
