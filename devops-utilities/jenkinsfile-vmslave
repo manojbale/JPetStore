@@ -25,7 +25,7 @@ node ('master')
 	stage ('build docker image') {
 	            sh '''
 				cd devops-utilities/
-				docker build -t jpetstore:$BUILD_NUMBER .
+				docker build -t jpetstore:$BUILD_NUMBER . --file dockerfile-jpetstore-image
 				'''
 				                }
 
