@@ -1,4 +1,4 @@
-node ('jenkinsslave) {
+node ('jenkinsslave') {
              stage('Checkout') {
 				
 				sh '''git --version'''
