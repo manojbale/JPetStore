@@ -1,4 +1,4 @@
-node  
+node ('jenkins')
 {
     stage('Checkout') {
 				
@@ -10,8 +10,7 @@ node
 
     stage('maven build step') {
 				
-				sh 
-				'''
+				sh '''
 				mvn --version
 				mvn clean install
 				'''
