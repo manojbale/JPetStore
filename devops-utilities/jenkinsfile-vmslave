@@ -15,4 +15,18 @@ node ('master')
 				mvn clean install
 				'''
 				              }
+							  
+	stage ('move jpetstore.war to docker build workspace') {
+				sh '''
+				cp -r target/jpetstore.war devops-utilities/
+				'''
+				                                           }
+														   
+	stage ('build docker image' {
+	            sh '''
+				cd devops-utilities/
+				docker build -t jpetstore:$BUILD_NUMBER .
+				'''
+				                }
+
 }
