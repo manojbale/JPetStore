@@ -2,7 +2,7 @@ trigger:
   batch: true
   branches:
     include:
-    - dev
+    - prod
 pr: none  
 pool:
   vmImage: windows-latest
