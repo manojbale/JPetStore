@@ -20,35 +20,36 @@ stages:
    - Agent.Name -equals manojbale-agent2
   displayName: 'stage1'
   jobs:
-  - job: 'first_stage1'
-    pool: 
-     vmImage: ubuntu-latest
-    steps:
-    - script: echo Hello, world!
-      displayName: 'Run a one-line script'
-      enabled: false
-    - task: PublishBuildArtifacts@1
-      inputs:
-        PathtoPublish: '$(Build.sourcesDirectory)'
-        ArtifactName: 'uploaded'
-        publishLocation: 'Container'
-  
-  - job: 'second_stage1'
-    displayName: 'my second job'
-    steps:
-    - script: |
-       echo Add other tasks to build, test, and deploy your project.
-         echo See https://aka.ms/yaml
-      displayName: 'Run a multi-line script'
+  - deployment: stage1deploy
+    timeoutInMinutes: 7200
+    displayName: stage1deploy
+    environment: 
+     name: demo-dev
+    strategy:
+     runOnce:
+       deploy:
+         steps:
+         - script: |
+            echo test
+           displayName: "test"
+           continueOnError: true
 
 - stage: 'stage2'
-  pool:
-   vmImage: ubuntu-latest
   displayName: 'stage2'
-  jobs:
-    - job: 'first_stage2'
-      steps:
-       - script: |
-          echo "manoj" 
+  jobs: 
+  - deployment: stage2deploy
+    timeoutInMinutes: 7200
+    displayName: stage2deploy
+    environment: 
+     name: demo-uat
+    strategy:
+     runOnce:
+       deploy:
+         steps:
+         - script: |
+            echo test
+           displayName: "test"
+           continueOnError: true
+
 
   
