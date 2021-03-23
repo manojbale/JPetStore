@@ -41,14 +41,14 @@ stages:
          echo See https://aka.ms/yaml
       displayName: 'Run a multi-line script'
 
-#- stage: 'stage2'
-#  pool:
-#   vmImage: ubuntu-latest
-#  displayName: 'stage2'
-#  jobs:
-#    - job: 'first_stage2'
-#      steps:
-#       - script: |
-#          echo "manoj" 
-#
+- stage: 'stage2'
+  pool:
+   vmImage: ubuntu-latest
+  displayName: 'stage2'
+  jobs:
+    - job: 'first_stage2'
+      steps:
+       - script: |
+          echo "manoj" 
+
   
