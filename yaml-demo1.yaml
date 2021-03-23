@@ -5,6 +5,7 @@
 
 trigger:
 - master
+- testing
 
 pool:
   vmImage: ubuntu-latest
