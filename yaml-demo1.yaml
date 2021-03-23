@@ -1,0 +1,51 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+- stage: 'stage1'
+  pool: 
+   name: manojbale
+   demands:
+   - Agent.Name -equals manojbale-agent2
+  displayName: 'stage1'
+  jobs:
+  - job: 'first_stage1'
+    pool: 
+     vmImage: ubuntu-latest
+    steps:
+    - script: echo Hello, world!
+      displayName: 'Run a one-line script'
+      enabled: false
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.sourcesDirectory)'
+        ArtifactName: 'uploaded'
+        publishLocation: 'Container'
+  
+  - job: 'second_stage1'
+    displayName: 'my second job'
+    steps:
+    - script: |
+       echo Add other tasks to build, test, and deploy your project.
+         echo See https://aka.ms/yaml
+      displayName: 'Run a multi-line script'
+
+#- stage: 'stage2'
+#  pool:
+#   vmImage: ubuntu-latest
+#  displayName: 'stage2'
+#  jobs:
+#    - job: 'first_stage2'
+#      steps:
+#       - script: |
+#          echo "manoj" 
+#
+  
