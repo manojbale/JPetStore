@@ -4,52 +4,22 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
-- testing
-pr:
-- master
+ branches:
+  include:
+  - master
+  - testing
+ paths:
+  include:
+  - reports/junit/
+pr: none
 
 pool:
   vmImage: ubuntu-latest
+steps:
+- script: |
+   echo hello
 
-stages:
-- stage: 'stage1'
-  pool: 
-   name: manojbale
-   demands:
-   - Agent.Name -equals manojbale-agent2
-  displayName: 'stage1'
-  jobs:
-  - deployment: stage1deploy
-    timeoutInMinutes: 7200
-    displayName: stage1deploy
-    environment: 
-     name: demo-dev
-    strategy:
-     runOnce:
-       deploy:
-         steps:
-         - script: |
-            echo test
-           displayName: "test"
-           continueOnError: true
 
-- stage: 'stage2'
-  displayName: 'stage2'
-  jobs: 
-  - deployment: stage2deploy
-    timeoutInMinutes: 7200
-    displayName: stage2deploy
-    environment: 
-     name: demo-uat
-    strategy:
-     runOnce:
-       deploy:
-         steps:
-         - script: |
-            echo test
-           displayName: "test"
-           continueOnError: true
 
 
   
