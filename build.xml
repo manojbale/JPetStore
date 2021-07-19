@@ -1,4 +1,4 @@
-<!--#
+<!--##
 developerA change
        Copyright 2010-2018 the original author or authors.developerA change
 developerA change
@@ -181,3 +181,4 @@ developerB change
   <target name="all" depends="test.report, coverage.report, war"/>
 
 </project>
+
