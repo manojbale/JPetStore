@@ -8,9 +8,7 @@ trigger:
   include:
   - master
   - testing
- paths:
-  include:
-  - reports/junit/
+
 pr: none
 
 pool:
