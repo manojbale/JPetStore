@@ -9,13 +9,15 @@ trigger:
   - master
   - testing
 
-pr: none
+pr:
+ enabled: false
 
 pool:
   vmImage: ubuntu-latest
 steps:
 - script: |
    echo hello
+
 
 
 
