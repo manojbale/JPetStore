@@ -9,8 +9,6 @@ trigger:
   - master
   - testing
 
-pr:
- enabled: false
 
 pool:
   vmImage: ubuntu-latest
