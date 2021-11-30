@@ -17,6 +17,7 @@ trigger:
 
 
 
+
 pr:
  autoCancel: true
  branches:
