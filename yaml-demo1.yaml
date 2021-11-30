@@ -9,12 +9,17 @@ trigger:
   - develop/*
   - master
 
-pr: none
+pr:
+ autoCancel: false
+ branches:
+   include:
+   - master
 
 pool:
   vmImage: ubuntu-latest
 steps:
 - script: |
+   sleep 30
    echo hello
 
 
