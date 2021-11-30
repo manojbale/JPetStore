@@ -10,6 +10,7 @@ trigger:
   - master
 
 
+
 pr:
  autoCancel: false
  branches:
