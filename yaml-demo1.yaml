@@ -21,8 +21,3 @@ steps:
 - script: |
    sleep 30
    echo hello
-
-
-
-
-  
