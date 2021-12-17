@@ -9,7 +9,7 @@ pr: none
 
 schedules:
 - cron: "*/15 * * * *"
-  displayName: Run for every 2 minutes
+  displayName: Run for every 15 minutes
   branches:
     include:
     - master
