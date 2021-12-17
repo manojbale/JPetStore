@@ -8,7 +8,7 @@ pr: none
 
 
 schedules:
-- cron: "*/2 * * * *"
+- cron: "*/15 * * * *"
   displayName: Run for every 2 minutes
   branches:
     include:
