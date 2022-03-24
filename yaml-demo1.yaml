@@ -8,6 +8,7 @@ trigger:
   include:
   - develop/*
   - master
+  
 
 pr:
  autoCancel: false
