@@ -15,14 +15,21 @@ schedules:
 #    - master
 #  always: true
 
-- cron: "*/2 * * * *"
+#- cron: "*/2 * * * *"
+#  displayName: Daily midnight build
+#  branches:
+#    include:
+#    - master
+#    # - main
+#  always: true
+
+- cron: "*/4 * * * *"
   displayName: Daily midnight build
   branches:
     include:
     - master
     # - main
   always: true
-
 pool:
   vmImage: ubuntu-latest
 
@@ -34,4 +41,4 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-  
+
