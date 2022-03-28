@@ -15,7 +15,7 @@ schedules:
 #    - master
 #  always: true
 
-- cron: "06 15 * * *"
+- cron: "*/2 * * * *"
   displayName: Daily midnight build
   branches:
     include:
