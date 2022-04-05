@@ -8,9 +8,13 @@ pr: none
 
 
 schedules:
-- cron: "*/4 * * * *"
+- cron: "*/2 * * * *"
   displayName: test
+  branches:
+    include:
+      - master
   always: true
+
 pool:
   vmImage: ubuntu-latest
 
