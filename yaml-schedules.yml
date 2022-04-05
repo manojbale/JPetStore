@@ -9,7 +9,7 @@ pr: none
 
 schedules:
 - cron: "*/4 * * * *"
-  displayName: Daily midnight build
+  displayName: test
   always: true
 pool:
   vmImage: ubuntu-latest
