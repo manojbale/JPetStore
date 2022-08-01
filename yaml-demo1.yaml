@@ -19,7 +19,7 @@ resources:
  repositories:
    - repository: self
      type: github
-     name: dtlenv
+     name: manojbale/dtlenv
      endpoint: manojbale
      ref: main
 
