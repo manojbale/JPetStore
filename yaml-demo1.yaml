@@ -15,10 +15,18 @@ pr:
  branches:
    include:
    - master
+resources:
+ repositories:
+   - repository: self
+     type: github
+     name: dtlenv
+     endpoint: manojbale
+     ref: main
 
 pool:
   vmImage: ubuntu-latest
 steps:
+- checkout: self
 - script: |
    sleep 30
    echo hello
