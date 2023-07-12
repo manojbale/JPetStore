@@ -20,7 +20,7 @@ on:
 jobs:
  poc-eus2-blue-test:
   runs-on: ubuntu-latest
-  uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml
+  uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
   with:
     stage_name: poc-eus2-blue-test
     cluster: aks-dscpoc-eus2-blue
