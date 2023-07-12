@@ -20,7 +20,8 @@ on:
 
 jobs:
  poc-eus2-blue-test:
-  uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
+  runs-on: ubuntu-latest
+  uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
   with:
     stage_name: poc-eus2-blue-test
     cluster: aks-dscpoc-eus2-blue
