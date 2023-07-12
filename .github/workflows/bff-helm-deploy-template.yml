@@ -34,11 +34,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - name: Get the credentials 
+#      - uses: azure/login@v1
+#        with:
+#          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Get the credentials
         run: |
+          az --version
           echo "Testing the deployment"
           echo "az aks get-credentials --resource-group ${{ inputs.resource_group }} --name ${{ inputs.cluster }} --admin --overwrite-existing --subscription ${{ inputs.subscription_id }}"
           echo "az account set --subscription="f61bb119-e266-4de6-9db0-4c7a95a77d78"
