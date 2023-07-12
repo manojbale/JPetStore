@@ -1,0 +1,33 @@
+# Terraform Workflow to deploy the BFF application in AKS clusters
+
+name: BFF-HELM-DEPLOY
+
+# Controls when the action will run. Manual trigger enabled.
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - "devops/**/*"
+      - ".github/workflows/bff-helm-deploy-template.yml"
+      - ".github/workflows/bff-helm-deploy.yml"
+  push:
+    branches:
+      - master
+    paths:
+      - "devops/**/*"
+
+jobs:
+ poc-eus2-blue-test:
+  uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
+  with:
+    stage_name: poc-eus2-blue-test
+    cluster: aks-dscpoc-eus2-blue
+    resource_group: rg-poc-eastus2-blue
+    region: eus2
+    namespace: myfinance-test
+    image_tag: latest
+    subscription_id: f61bb119-e266-4de6-9db0-4c7a95a77d78
+  secrets:
+    AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
