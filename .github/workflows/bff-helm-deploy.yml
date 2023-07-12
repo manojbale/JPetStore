@@ -15,8 +15,7 @@ on:
   push:
     branches:
       - master
-    paths:
-      - "devops/**/*"
+
 
 jobs:
  poc-eus2-blue-test:
