@@ -1,0 +1,21 @@
+on:
+ workflow_call:
+   secrets:
+    AZURE_CREDENTIALS:
+      required: true
+
+
+jobs: 
+ bff-helm-deploy:
+    runs-on: [self-hosted, linux, x64]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Get the credentials 
+        run: |
+          echo "Testing the deployment"
+          az aks get-credentials --resource-group ${{ inputs.resource_group }} --name ${{ inputs.cluster }} --admin --overwrite-existing --subscription ${{ inputs.subscription_id }} 
+          az account set --subscription="f61bb119-e266-4de6-9db0-4c7a95a77d78
+         
