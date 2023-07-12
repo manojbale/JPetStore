@@ -1,3 +1,5 @@
+name: BFF-HELM-DEPLOY-TEMPLATE
+
 on:
  workflow_call:
    secrets:
