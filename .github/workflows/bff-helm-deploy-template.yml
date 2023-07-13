@@ -42,6 +42,7 @@ jobs:
         run: |
           az --version
           echo "Testing the deployment"
-          echo "az aks get-credentials --resource-group ${{ inputs.resource_group }} --name ${{ inputs.cluster }} --admin --overwrite-existing --subscription ${{ inputs.subscription_id }} "
+          az aks get-credentials --resource-group ${{ inputs.resource_group }} --name ${{ inputs.cluster }} --admin --overwrite-existing --subscription ${{ inputs.subscription_id }}
+          az account show
           echo "az account set --subscription="f61bb119-e266-4de6-9db0-4c7a95a77d78""
           echo "${{ inputs.stage_name }} ${{ inputs.namespace }} ${{ inputs.image_tag }}"
