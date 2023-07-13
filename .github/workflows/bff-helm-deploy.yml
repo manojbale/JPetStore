@@ -23,6 +23,7 @@ jobs:
   with:
     stage_name: poc-eus2-blue-test
     cluster: aks-dscpoc-eus2-blue
+    environment_name: poc-eus2-blue-test
     resource_group: rg-poc-eastus2-blue
     region: eus2
     namespace: myfinance-test
@@ -37,6 +38,7 @@ jobs:
    with:
      stage_name: dev-eus2-blue-test
      cluster: aks-dscdev-eus2-blue
+     environment_name: dev-eus2-blue-test
      resource_group: rg-dev-eastus2-blue
      region: eus2
      namespace: myfinance-test
@@ -51,6 +53,7 @@ jobs:
   with:
     stage_name: prod-eus2-blue-test
     cluster: aks-dscprod-eus2-blue
+    environment_name: prod-eus2-blue-test
     resource_group: rg-prod-eastus2-blue
     region: eus2
     namespace: myfinance-test
