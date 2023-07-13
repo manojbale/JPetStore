@@ -30,3 +30,29 @@ jobs:
     subscription_id: f61bb119-e266-4de6-9db0-4c7a95a77d78
   secrets:
     AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+
+ dev-eus2-blue-test:
+   uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
+   with:
+     stage_name: dev-eus2-blue-test
+     cluster: aks-dscdev-eus2-blue
+     resource_group: rg-dev-eastus2-blue
+     region: eus2
+     namespace: myfinance-test
+     image_tag: latest
+     subscription_id: 94188215-a4e4-48dd-94b1-2ff74b484696
+   secrets:
+     AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+
+ prod-eus2-blue-test:
+  uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
+  with:
+    stage_name: prod-eus2-blue-test
+    cluster: aks-dscprod-eus2-blue
+    resource_group: rg-prod-eastus2-blue
+    region: eus2
+    namespace: myfinance-test
+    image_tag: latest
+    subscription_id: 8f6a28e8-e647-4bdb-ba40-cbcbc034ef00
+  secrets:
+    AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}

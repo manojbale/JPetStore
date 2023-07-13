@@ -44,5 +44,6 @@ jobs:
           echo "Testing the deployment"
           az aks get-credentials --resource-group ${{ inputs.resource_group }} --name ${{ inputs.cluster }} --admin --overwrite-existing --subscription ${{ inputs.subscription_id }}
           az account show
-          echo "az account set --subscription="f61bb119-e266-4de6-9db0-4c7a95a77d78""
+          az account set --subscription=${{ inputs.subscription_id }}
+          kubectl cluster-info
           echo "${{ inputs.stage_name }} ${{ inputs.namespace }} ${{ inputs.image_tag }}"
