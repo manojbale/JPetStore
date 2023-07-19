@@ -13,25 +13,25 @@ on:
      default: latest
     poc-eus2-blue-test:
      type: boolean
-     description: 'Select which stage to deploy to'
+     description: 'deploy to poc-eus2-blue-test?'
      required: false
      default: false
 
     poc-eus2-blue-int:
      type: boolean
-     description: 'Select which stage to deploy to'
+     description: 'deploy to poc-eus2-blue-int?'
      required: false
      default: false
 
     dev-eus2-blue-test:
      type: boolean
-     description: 'Select which stage to deploy to'
+     description: 'deploy to dev-eus2-blue-test?'
      required: false
      default: false
 
     dev-eus2-blue-int:
      type: boolean
-     description: 'Select which stage to deploy to'
+     description: 'deploy to dev-eus2-blue-int?'
      required: false
      default: false
 
