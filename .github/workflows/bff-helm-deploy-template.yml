@@ -3,19 +3,16 @@ name: BFF-HELM-DEPLOY-TEMPLATE
 on:
  workflow_call:
    inputs:
-    stage_name:
-      required: true
-      type: string
-    cluster:
+    Cluster:
       required: true
       type: string
     resource_group:
       required: true
       type: string
-    region:
+    Region:
       required: true
       type: string
-    namespace:
+    Namespace:
       required: true
       type: string
     image_tag:
@@ -27,27 +24,271 @@ on:
     environment_name:
       required: true
       type: string
+    deployment_name:
+      required: true
+      type: string
+    cluster_name:
+        required: true
+        type: string
    secrets:
     AZURE_CREDENTIALS:
+      required: true
+    KUBE_CONFIG:
       required: true
 
 
 jobs: 
  bff-helm-deploy:
-    runs-on: ubuntu-latest
+    runs-on: [ ubuntu-latest ]
     environment: ${{ inputs.environment_name }}
     steps:
       - uses: actions/checkout@v2
+        name: source code checkout
       - uses: azure/login@v1
+        if: false
+        name: Azure login using service principle
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           allow-no-subscriptions: true
-      - name: Get the credentials
+      - name: Verify the login and azcli, helm version
         run: |
           az --version
-          echo "Testing the deployment"
-          az aks get-credentials --resource-group ${{ inputs.resource_group }} --name ${{ inputs.cluster }} --admin --overwrite-existing --subscription ${{ inputs.subscription_id }}
+          helm version
+          az account show
+      - name: Get the AKS credentials
+        if: false
+        run: |
           az account show
           az account set --subscription=${{ inputs.subscription_id }}
+          az aks get-credentials --resource-group ${{ inputs.resource_group }} --name ${{ inputs.cluster_name }} --admin --overwrite-existing --subscription ${{ inputs.subscription_id }}
+          echo "Check the AKS Cluster info"
           kubectl cluster-info
-          echo "${{ inputs.stage_name }} ${{ inputs.namespace }} ${{ inputs.image_tag }}"
+    
+
+      - name: Get_current_imagetag
+        if: false
+        run: | 
+         kubectl config set-context --current --namespace ${{ inputs.Namespace }}
+         imagetag=$(kubectl get deployment ${{ inputs.deployment_name }} -o=jsonpath='{$.spec.template.spec.containers[:1].image}')
+         echo "imagetag before sed: $imagetag"
+         echo $imagetag | sed 's/.*bff://'
+         echo "imagetag after sed: $imagetag"
+         if [[ "${{ inputs.image_tag }}" == "latest" ]]; then
+           echo "bffImageTag=$(echo $imagetag | sed 's/.*bff://')" >> "$GITHUB_OUTPUT"  
+         else
+           echo "bffImageTag=${{ inputs.image_tag }}" >> "$GITHUB_OUTPUT" 
+         fi
+        id: imagetag
+        continue-on-error: true
+
+      - name: "print bffImageTag"
+        if: false
+        run: |
+              echo "Output is ${{steps.imagetag.outputs.bffImageTag}}"
+ 
+      - name: "Set_Helm_Variables"
+        if: false
+        id: helmvar
+        run: |
+          echo "Cluster: ${{ inputs.Cluster }}"
+          echo "Region: ${{ inputs.Region }}"
+          echo "Namespace: ${{ inputs.Namespace }}"
+          echo "ImageTag: ${{ steps.imagetag.outputs.bffImageTag }}"
+          if [[ "${{ inputs.Cluster }}" == "poc"  ]]; then
+            echo "replicaCount=1" >> "$GITHUB_OUTPUT"
+            echo "minReplicas=1" >> "$GITHUB_OUTPUT"
+            echo "maxReplicas=3" >> "$GITHUB_OUTPUT"                  
+            echo "nodepool=sysnodepool" >> "$GITHUB_OUTPUT"
+            echo "imagerepository=dscpocacr.azurecr.io/myfinance/bff" >> "$GITHUB_OUTPUT"
+            echo "fdenabled=yes" >> "$GITHUB_OUTPUT"
+            echo "host=myfinance-poc-eu.mercedes.me" >> "$GITHUB_OUTPUT"
+            echo "configSecretObjectName=${{ inputs.Namespace }}-bff-config" >> "$GITHUB_OUTPUT"
+            echo "tlsSecretObjectName=myfinance-bff-tls-poc-eus2" >> "$GITHUB_OUTPUT"
+            echo "keyVaultName=kv-eus2-poc-fapp" >> "$GITHUB_OUTPUT"
+            echo "userAssignedIdentityID=a55b6509-58ee-4976-b991-56099402d74a" >> "$GITHUB_OUTPUT"
+            
+            if [[ "${{ inputs.Namespace }}" == "myfinance-test" ]]; then
+              echo "ingressHostMetricPath=/bff-test/metrics" >> "$GITHUB_OUTPUT"
+              echo "ingressHostApplicationPath='/bff-test/?(.*)'" >> "$GITHUB_OUTPUT"
+              echo "ddapmenv=poc-test" >> "$GITHUB_OUTPUT"
+              echo "ddapmsvc=bff-poc-test" >> "$GITHUB_OUTPUT"
+            elif [[ "${{ inputs.Namespace }}" == "myfinance-int" ]]; then
+              echo "ingressHostMetricPath=/bff-int/metrics" >> "$GITHUB_OUTPUT"
+              echo "ingressHostApplicationPath='/bff-int/?(.*)'" >> "$GITHUB_OUTPUT"
+              echo "ddapmenv=poc-int" >> "$GITHUB_OUTPUT"
+              echo "ddapmsvc=bff-poc-int" >> "$GITHUB_OUTPUT"
+            else
+              exit 1
+          fi
+            
+          elif [[ "${{ inputs.Cluster }}" == "dev" && "${{ inputs.Region }}" == "westeu" ]]; then
+            echo "replicaCount=1" >> "$GITHUB_OUTPUT"
+            echo "minReplicas=1" >> "$GITHUB_OUTPUT"
+            echo "maxReplicas=3" >> "$GITHUB_OUTPUT"                  
+            echo "nodepool=sysnodepool" >> "$GITHUB_OUTPUT"
+            echo "imagerepository=dscdevacr.azurecr.io/myfinance/bff" >> "$GITHUB_OUTPUT"
+            echo "fdenabled=false" >> "$GITHUB_OUTPUT"
+            echo "host=myfinance-staging-eu.mercedes.me" >> "$GITHUB_OUTPUT"
+            echo "configSecretObjectName=${{ inputs.Namespace }}-bff-config" >> "$GITHUB_OUTPUT"
+            echo "tlsSecretObjectName=myfinance-bff-tls-dev-westeu" >> "$GITHUB_OUTPUT"
+            echo "keyVaultName=kv-westeu-dev-fapp" >> "$GITHUB_OUTPUT"
+            echo "userAssignedIdentityID=22c8634b-ecb7-4ad0-b67f-6df5e2ba9f0d" >> "$GITHUB_OUTPUT"
+            if [[ "${{ inputs.Namespace }}" == "myfinance-test" ]]; then
+              echo "ingressHostMetricPath=/bff-test/metrics" >> "$GITHUB_OUTPUT"
+              echo "ingressHostApplicationPath='/bff-test/?(.*)'" >> "$GITHUB_OUTPUT"
+              echo "ddapmenv=westeu-test" >> "$GITHUB_OUTPUT"
+              echo "ddapmsvc=bff-westeu-test" >> "$GITHUB_OUTPUT"
+            elif [[ "${{ inputs.Namespace }}" == "myfinance-int" ]]; then
+              echo "ingressHostMetricPath=/bff-int/metrics" >> "$GITHUB_OUTPUT"
+              echo "ingressHostApplicationPath='/bff-int/?(.*)'" >> "$GITHUB_OUTPUT"
+              echo "ddapmenv=westeu-int" >> "$GITHUB_OUTPUT"
+              echo "ddapmsvc=bff-westeu-int" >> "$GITHUB_OUTPUT" 
+            else
+              exit 1
+            fi
+            
+          elif [[ "${{ inputs.Cluster }}" == "dev" && "${{ inputs.Region }}" == "seasia" ]]; then
+            echo "replicaCount=1" >> "$GITHUB_OUTPUT"
+            echo "minReplicas=1" >> "$GITHUB_OUTPUT"
+            echo "maxReplicas=3" >> "$GITHUB_OUTPUT"                  
+            echo "nodepool=sysnodepool" >> "$GITHUB_OUTPUT"
+            echo "imagerepository=dscdevacr.azurecr.io/myfinance/bff" >> "$GITHUB_OUTPUT"
+            echo "fdenabled=true" >> "$GITHUB_OUTPUT"
+            echo "host=myfinance-staging-aap.mercedes.me" >> "$GITHUB_OUTPUT"
+            echo "configSecretObjectName=${{ inputs.Namespace }}-bff-config" >> "$GITHUB_OUTPUT"
+            echo "tlsSecretObjectName=myfinance-bff-tls-dev-seasia" >> "$GITHUB_OUTPUT"
+            echo "keyVaultName=kv-seasia-dev-fapp" >> "$GITHUB_OUTPUT"
+            echo "userAssignedIdentityID=ef0b98da-ea9f-45d8-a2b8-3649d8d867fb" >> "$GITHUB_OUTPUT"
+            if [[ "${{ inputs.Namespace }}" == "myfinance-test" ]]; then
+              echo "ingressHostMetricPath=/bff-test/metrics" >> "$GITHUB_OUTPUT"
+              echo "ingressHostApplicationPath='/bff-test/?(.*)'" >> "$GITHUB_OUTPUT"
+              echo "ddapmenv=seasia-test" >> "$GITHUB_OUTPUT"
+              echo "ddapmsvc=bff-seasia-test" >> "$GITHUB_OUTPUT"
+            elif [[ "${{ inputs.Namespace }}" == "myfinance-int" ]]; then
+              echo "ingressHostMetricPath=/bff-int/metrics" >> "$GITHUB_OUTPUT"
+              echo "ingressHostApplicationPath='/bff-int/?(.*)'" >> "$GITHUB_OUTPUT"
+              echo "ddapmenv=seasia-int" >> "$GITHUB_OUTPUT"
+              echo "ddapmsvc=bff-seasia-int" >> "$GITHUB_OUTPUT"
+            else
+              exit 1
+            fi
+            
+          elif [[ "${{ inputs.Cluster }}" == "dev" && "${{ inputs.Region }}" == "eus2" ]]; then
+            echo "replicaCount=1" >> "$GITHUB_OUTPUT"
+            echo "minReplicas=1" >> "$GITHUB_OUTPUT"
+            echo "maxReplicas=3" >> "$GITHUB_OUTPUT"             
+            echo "nodepool]sysnodepool" >> "$GITHUB_OUTPUT"
+            echo "imagerepository=dscdevacr.azurecr.io/myfinance/bff" >> "$GITHUB_OUTPUT"
+            echo "fdenabled=true" >> "$GITHUB_OUTPUT"
+            echo "host=myfinance-staging-ams.mercedes.me" >> "$GITHUB_OUTPUT"
+            echo "configSecretObjectName=${{ inputs.Namespace }}-bff-config" >> "$GITHUB_OUTPUT"
+            echo "tlsSecretObjectName=myfinance-bff-tls-dev-eus2" >> "$GITHUB_OUTPUT"
+            echo "keyVaultName=kv-eus2-dev-fapp" >> "$GITHUB_OUTPUT"
+            echo "userAssignedIdentityID=905c3995-49f9-4933-bd4e-f1db92e832df" >> "$GITHUB_OUTPUT"
+            if [[ "${{ inputs.Namespace }}" == "myfinance-test" ]]; then
+              echo "ingressHostMetricPath=/bff-test/metrics" >> "$GITHUB_OUTPUT"
+              echo "ingressHostApplicationPath='/bff-test/?(.*)'" >> "$GITHUB_OUTPUT"
+              echo "ddapmenv=eus2-test" >> "$GITHUB_OUTPUT"
+              echo "ddapmsvc=bff-eus2-test" >> "$GITHUB_OUTPUT"
+            elif [[ "${{ inputs.Namespace }}" == "myfinance-int" ]]; then
+              echo "ingressHostMetricPath=/bff-int/metrics" >> "$GITHUB_OUTPUT"
+              echo "ingressHostApplicationPath='/bff-int/?(.*)'" >> "$GITHUB_OUTPUT"
+              echo "ddapmenv=eus2-int" >> "$GITHUB_OUTPUT"
+              echo "ddapmsvc=bff-eus2-int" >> "$GITHUB_OUTPUT"
+            else
+              exit 1
+            fi
+            
+          elif [[ "${{ inputs.Cluster }}" == "prod" && "${{ inputs.Region }}" == "westeu" ]]; then
+            echo "replicaCount=3" >> "$GITHUB_OUTPUT"
+            echo "minReplicas=3" >> "$GITHUB_OUTPUT"
+            echo "maxReplicas=6" >> "$GITHUB_OUTPUT"
+            echo "nodepool=sysnodepool" >> "$GITHUB_OUTPUT"
+            echo "imagerepository=dscprodacr.azurecr.io/myfinance/bff" >> "$GITHUB_OUTPUT"
+            echo "fdenabled=false" >> "$GITHUB_OUTPUT"
+            echo "host=myfinance-eu.mercedes.me" >> "$GITHUB_OUTPUT"
+            echo "configSecretObjectName=${{ inputs.Namespace }}-bff-config" >> "$GITHUB_OUTPUT"
+            echo "tlsSecretObjectName=myfinance-bff-tls-prod-westeu" >> "$GITHUB_OUTPUT"
+            echo "keyVaultName=kv-westeu-prod-fapp" >> "$GITHUB_OUTPUT"
+            echo "userAssignedIdentityID=c4039d04-ffc0-4651-94d0-a71a405ca86d" >> "$GITHUB_OUTPUT"
+            echo "ingressHostMetricPath=/bff/metrics" >> "$GITHUB_OUTPUT"
+            echo "ingressHostApplicationPath='/bff/?(.*)'" >> "$GITHUB_OUTPUT"
+            echo "ddapmenv=westeu-prod" >> "$GITHUB_OUTPUT"
+            echo "ddapmsvc=bff-westeu-pro" >> "$GITHUB_OUTPUT"
+
+          elif [[ "${{ inputs.Cluster }}" == "prod" && "${{ inputs.Region }}" == "seasia" ]]; then
+            echo "replicaCount=3" >> "$GITHUB_OUTPUT"
+            echo "minReplicas=3" >> "$GITHUB_OUTPUT"
+            echo "maxReplicas=6" >> "$GITHUB_OUTPUT"                  
+            echo "nodepool=sysnodepool" >> "$GITHUB_OUTPUT"
+            echo "imagerepository=dscprodacr.azurecr.io/myfinance/bff" >> "$GITHUB_OUTPUT"
+            echo "fdenabled=false" >> "$GITHUB_OUTPUT"
+            echo "host=myfinance-aap.mercedes.me" >> "$GITHUB_OUTPUT"
+            echo "configSecretObjectName=${{ inputs.Namespace }}-bff-config" >> "$GITHUB_OUTPUT"
+            echo "tlsSecretObjectName=myfinance-bff-tls-prod-seasia" >> "$GITHUB_OUTPUT"
+            echo "keyVaultName=kv-seasia-prod-fapp" >> "$GITHUB_OUTPUT"
+            echo "userAssignedIdentityID=04ba1b31-2368-46bf-80ec-4e648b0451e9" >> "$GITHUB_OUTPUT"
+            echo "ingressHostMetricPath=/bff/metrics" >> "$GITHUB_OUTPUT"
+            echo "ingressHostApplicationPath='/bff/?(.*)'" >> "$GITHUB_OUTPUT"
+            echo "ddapmenv=seasia-prod" >> "$GITHUB_OUTPUT"
+            echo "ddapmsvc=bff-seasia-pro" >> "$GITHUB_OUTPUT"
+
+            elif [[ "${{ inputs.Cluster }}" == "prod" && "${{ inputs.Region }}" == "eus2" ]]; then
+            echo "replicaCount=3" >> "$GITHUB_OUTPUT"
+            echo "minReplicas=3" >> "$GITHUB_OUTPUT"
+            echo "maxReplicas=6" >> "$GITHUB_OUTPUT"
+            echo "nodepool=sysnodepool" >> "$GITHUB_OUTPUT"
+            echo "imagerepository=dscprodacr.azurecr.io/myfinance/bff" >> "$GITHUB_OUTPUT"
+            echo "fdenabled=false" >> "$GITHUB_OUTPUT"
+            echo "host=myfinance-ams.mercedes.me" >> "$GITHUB_OUTPUT"
+            echo "configSecretObjectName=${{ inputs.Namespace }}-bff-config" >> "$GITHUB_OUTPUT"
+            echo "tlsSecretObjectName=myfinance-bff-tls-prod-eus2" >> "$GITHUB_OUTPUT"
+            echo "keyVaultName=kv-eus2-prod-fapp" >> "$GITHUB_OUTPUT"
+            echo "userAssignedIdentityID=6035a33f-a45a-4137-910f-2e213ca5d5e2" >> "$GITHUB_OUTPUT"
+            echo "ingressHostMetricPath=/bff/metrics" >> "$GITHUB_OUTPUT"
+            echo "ingressHostApplicationPath='/bff/?(.*)'" >> "$GITHUB_OUTPUT"
+            echo "ddapmenv=eus2-prod" >> "$GITHUB_OUTPUT"
+            echo "ddapmsvc=bff-eus2-pro" >> "$GITHUB_OUTPUT"
+
+          else
+           echo "${{ inputs.Cluster }} and ${{ inputs.Region }} were classified incorrect"
+             exit 1
+          fi
+     
+      - name: helmdeploy_myfinance-bff_chart
+        if: false
+        run: |
+         helm upgrade myfinance-bff devops/charts/ --install --force --wait --namespace=${{ inputs.Namespace }} \
+          --set environment.name=${{ inputs.Cluster }} \
+          --set appLabel=myfinance-bff \
+          --set replicaCount=${{ steps.helmvar.outputs.replicaCount }} \
+          --set nodepool=${{ steps.helmvar.outputs.nodepool }} \
+          --set image.repository=${{ steps.helmvar.outputs.imagerepository }} \
+          --set image.tag=${{ steps.imagetag.outputs.bffImageTag }} \
+          --set resources.limits.cpu=2 \
+          --set resources.limits.memory="512Mi" \
+          --set resources.requests.cpu=0.5 \
+          --set resources.requests.memory="256Mi" \
+          --set autoscaling.minReplicas=${{ steps.helmvar.outputs.minReplicas }} \
+          --set autoscaling.maxReplicas=${{ steps.helmvar.outputs.maxReplicas }} \
+          --set autoscaling.targetCPUUtilizationPercentage=75 \
+          --set autoscaling.targetMemoryUtilizationPercentage=75 \
+          --set ingress.fdenabled=${{ steps.helmvar.outputs.fdenabled }} \
+          --set "ingress.hosts[0].host=${{ steps.helmvar.outputs.host }}" \
+          --set "ingress.hosts[0].paths[0].path=${{ steps.helmvar.outputs.ingressHostMetricPath }}" \
+          --set "ingress.hosts[0].paths[0].pathType=ImplementationSpecific" \
+          --set "ingress.hosts[0].paths[1].path=${{ steps.helmvar.outputs.ingressHostApplicationPath }}" \
+          --set "ingress.hosts[0].paths[1].pathType=ImplementationSpecific" \
+          --set SecretProviderClass.secret.configSecretobjects.objectName=${{ steps.helmvar.outputs.configSecretObjectName }} \
+          --set SecretProviderClass.secret.configSecretobjects.objectAlias=.env \
+          --set SecretProviderClass.secret.configSecretobjects.objectType=secret \
+          --set SecretProviderClass.secret.tlsSecretobjects.objectName=${{ steps.helmvar.outputs.tlsSecretObjectName }} \
+          --set SecretProviderClass.secret.tlsSecretobjects.objectType=secret \
+          --set SecretProviderClass.parameters.keyvaultName=${{ steps.helmvar.outputs.keyVaultName }} \
+          --set SecretProviderClass.parameters.userAssignedIdentityID=${{ steps.helmvar.outputs.userAssignedIdentityID }} \
+          --set SecretProviderClass.parameters.tenantId=9652d7c2-1ccf-4940-8151-4a92bd474ed0 \
+          --set tlsDomain=${{ steps.helmvar.outputs.host }} \
+          --set datadog.apm.env=${{ steps.helmvar.outputs.ddapmenv }} \
+          --set datadog.apm.svc=${{ steps.helmvar.outputs.ddapmsvc }} \
+        env:  
+          KUBECONFIG: ${{ secrets.KUBE_CONFIG }}

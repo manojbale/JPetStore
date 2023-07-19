@@ -5,59 +5,105 @@ name: BFF-HELM-DEPLOY
 # Controls when the action will run. Manual trigger enabled.
 on:
   workflow_dispatch:
-  pull_request:
-    branches:
-      - master
-    paths:
-      - "devops/**/*"
-      - ".github/workflows/bff-helm-deploy-template.yml"
-      - ".github/workflows/bff-helm-deploy.yml"
-  push:
-    branches:
-      - master
+   inputs:
+    image_tag: 
+     description: 'Provide specific version to deploy'
+     type: string
+     required: true
+     default: latest
+    poc-eus2-blue-test:
+     type: boolean
+     description: 'Select which stage to deploy to'
+     required: false
+     default: false
 
+    poc-eus2-blue-int:
+     type: boolean
+     description: 'Select which stage to deploy to'
+     required: false
+     default: false
+
+    dev-eus2-blue-test:
+     type: boolean
+     description: 'Select which stage to deploy to'
+     required: false
+     default: false
+
+    dev-eus2-blue-int:
+     type: boolean
+     description: 'Select which stage to deploy to'
+     required: false
+     default: false
 
 jobs:
  poc-eus2-blue-test:
-  uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
+  if: ${{ inputs.poc-eus2-blue-test == true }}
+  uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
   with:
-    stage_name: poc-eus2-blue-test
-    cluster: aks-dscpoc-eus2-blue
+    #variables used for setting up the helm template variables
+    Cluster: poc
+    Namespace: myfinance-test
+    Region: eus2
+    deployment_name: myfinance-bff
     environment_name: poc-eus2-blue-test
     resource_group: rg-poc-eastus2-blue
-    region: eus2
-    namespace: myfinance-test
+    cluster_name: aks-dscpoc-eus2-blue
     image_tag: latest
     subscription_id: f61bb119-e266-4de6-9db0-4c7a95a77d78
   secrets:
     AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+    KUBE_CONFIG: /home/runner/.kube/config
 
- dev-eus2-blue-test:
-   needs: poc-eus2-blue-test
-   uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
+ poc-eus2-blue-int:
+   if: ${{ inputs.poc-eus2-blue-int == true }}
+   uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
    with:
-     stage_name: dev-eus2-blue-test
-     cluster: aks-dscdev-eus2-blue
-     environment_name: dev-eus2-blue-test
-     resource_group: rg-dev-eastus2-blue
-     region: eus2
-     namespace: myfinance-test
+     #variables used for setting up the helm template variables
+     Cluster: poc
+     Namespace: myfinance-int
+     Region: eus2
+     deployment_name: myfinance-bff
+     environment_name: poc-eus2-blue-int
+     resource_group: rg-poc-eastus2-blue
+     cluster_name: aks-dscpoc-eus2-blue
      image_tag: latest
-     subscription_id: 94188215-a4e4-48dd-94b1-2ff74b484696
+     subscription_id: f61bb119-e266-4de6-9db0-4c7a95a77d78
    secrets:
      AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+     KUBE_CONFIG: /home/runner/.kube/config
 
- prod-eus2-blue-test:
-  needs: dev-eus2-blue-test
-  uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
+ dev-eus2-blue-test:
+  if: ${{ inputs.dev-eus2-blue-test == true }}
+  uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
   with:
-    stage_name: prod-eus2-blue-test
-    cluster: aks-dscprod-eus2-blue
-    environment_name: prod-eus2-blue-test
-    resource_group: rg-prod-eastus2-blue
-    region: eus2
-    namespace: myfinance-test
+    #variables used for setting up the helm template variables
+    Cluster: poc
+    Namespace: myfinance-test
+    Region: eus2
+    deployment_name: myfinance-bff
+    environment_name: poc-eus2-blue-test
+    resource_group: rg-poc-eastus2-blue
+    cluster_name: aks-dscpoc-eus2-blue
     image_tag: latest
-    subscription_id: 8f6a28e8-e647-4bdb-ba40-cbcbc034ef00
+    subscription_id: f61bb119-e266-4de6-9db0-4c7a95a77d78
   secrets:
     AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+    KUBE_CONFIG: /home/runner/.kube/config
+
+ dev-eus2-blue-int:
+   if: ${{ inputs.dev-eus2-blue-int == true }}
+   uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
+   with:
+     #variables used for setting up the helm template variables
+     Cluster: poc
+     Namespace: myfinance-int
+     Region: eus2
+     deployment_name: myfinance-bff
+     environment_name: poc-eus2-blue-int
+     resource_group: rg-poc-eastus2-blue
+     cluster_name: aks-dscpoc-eus2-blue
+     image_tag: latest
+     subscription_id: f61bb119-e266-4de6-9db0-4c7a95a77d78
+   secrets:
+     AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+     KUBE_CONFIG: /home/runner/.kube/config
