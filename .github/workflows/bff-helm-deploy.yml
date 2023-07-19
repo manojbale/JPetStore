@@ -38,7 +38,7 @@ on:
 jobs:
  poc-eus2-blue-test:
   if: ${{ inputs.poc-eus2-blue-test == true }}
-  uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml
+  uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
   with:
     #variables used for setting up the helm template variables
     Cluster: poc
@@ -56,7 +56,7 @@ jobs:
 
  poc-eus2-blue-int:
    if: ${{ inputs.poc-eus2-blue-int == true }}
-   uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml
+   uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
    with:
      #variables used for setting up the helm template variables
      Cluster: poc
@@ -74,7 +74,7 @@ jobs:
 
  dev-eus2-blue-test:
   if: ${{ inputs.dev-eus2-blue-test == true }}
-  uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml
+  uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
   with:
     #variables used for setting up the helm template variables
     Cluster: poc
@@ -92,7 +92,7 @@ jobs:
 
  dev-eus2-blue-int:
    if: ${{ inputs.dev-eus2-blue-int == true }}
-   uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml
+   uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
    with:
      #variables used for setting up the helm template variables
      Cluster: poc
