@@ -155,7 +155,7 @@ jobs:
 
  dev-seasia-blue-test:
   if: ${{ inputs.dev-seasia-blue-test == true }}
-  uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@master
+  uses: manojbale/jpetstore/.github/workflows/bff-helm-deploy-template.yml@master
   with:
     #variables used for setting up the helm template variables
     Cluster: dev
@@ -173,7 +173,7 @@ jobs:
     
  dev-seasia-blue-int:
    if: ${{ inputs.dev-seasia-blue-int == true }}
-   uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@master
+   uses: manojbale/jpetstore/.github/workflows/bff-helm-deploy-template.yml@master
    with:
      #variables used for setting up the helm template variables
      Cluster: dev
@@ -191,7 +191,7 @@ jobs:
 
  dev-westeu-blue-test:
   if: ${{ inputs.dev-westeu-blue-test == true }}
-  uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@master
+  uses: manojbale/jpetstore/.github/workflows/bff-helm-deploy-template.yml@master
   with:
     #variables used for setting up the helm template variables
     Cluster: dev
@@ -209,7 +209,7 @@ jobs:
         
  dev-westeu-blue-int:
    if: ${{ inputs.dev-westeu-blue-int == true }}
-   uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@master
+   uses: manojbale/jpetstore/.github/workflows/bff-helm-deploy-template.yml@master
    with:
      #variables used for setting up the helm template variables
      Cluster: dev
@@ -229,7 +229,7 @@ jobs:
 #EUS2
  prod-eus2-blue:
    if: ${{ inputs.prod-eus2-blue == true }}
-   uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@master
+   uses: manojbale/jpetstore/.github/workflows/bff-helm-deploy-template.yml@master
    with:
      #variables used for setting up the helm template variables
      Cluster: prod
@@ -248,7 +248,7 @@ jobs:
 #SEASIA     
  prod-seasia-blue:
    if: ${{ inputs.prod-seasia-blue == true }}
-   uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@master
+   uses: manojbale/jpetstore/.github/workflows/bff-helm-deploy-template.yml@master
    with:
      #variables used for setting up the helm template variables
      Cluster: prod
@@ -267,7 +267,7 @@ jobs:
 #WESTEU     
  prod-westeu-blue:
   if: ${{ inputs.prod-westeu-blue == true }}
-  uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@master
+  uses: manojbale/jpetstore/.github/workflows/bff-helm-deploy-template.yml@master
   with:
     #variables used for setting up the helm template variables
     Cluster: prod
