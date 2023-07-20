@@ -37,7 +37,7 @@ on:
 
 jobs:
  poc-eus2-blue-test:
-  if: ${{ inputs.environment == 'poc' }} && ${{ inputs.region == 'eus2' }} && ${{ inputs.namespace == 'test' }}
+  if: ${{ github.event.inputs.environment.options == 'poc' }} && ${{ github.event.inputs.region.options == 'eus2' }} && ${{ github.event.inputs.namespace.options == 'test' }}
   uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
   with:
     #variables used for setting up the helm template variables
@@ -55,7 +55,7 @@ jobs:
     KUBE_CONFIG: /home/runner/.kube/config
 
  poc-eus2-blue-int:
-   if: ${{ inputs.environment == 'poc' }} && ${{ inputs.region == 'eus2' }} && ${{ inputs.namespace == 'int' }}
+   if: ${{ github.event.inputs.environment.options == 'poc' }} && ${{ github.event.inputs.region.options == 'eus2' }} && ${{ github.event.inputs.namespace.options == 'int' }}
    uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
    with:
      #variables used for setting up the helm template variables
@@ -73,7 +73,7 @@ jobs:
      KUBE_CONFIG: /home/runner/.kube/config
 
  dev-eus2-blue-test:
-  if: ${{ inputs.environment == 'dev' }} && ${{ inputs.region == 'eus2' }} && ${{ inputs.namespace == 'test' }}
+  if: ${{ github.event.inputs.environment.options == 'dev' }} && ${{ github.event.inputs.region.options == 'eus2' }} && ${{ github.event.inputs.namespace.options == 'test' }}
   uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
   with:
     #variables used for setting up the helm template variables
@@ -91,7 +91,7 @@ jobs:
     KUBE_CONFIG: /home/runner/.kube/config
 
  dev-eus2-blue-int:
-   if: ${{ inputs.environment == 'dev' }} && ${{ inputs.region == 'eus2' }} && ${{ inputs.namespace == 'int' }}
+   if: ${{ github.event.inputs.environment.options == 'dev' }} && ${{ github.event.inputs.region.options == 'eus2' }} && ${{ github.event.inputs.namespace.options == 'int' }}
    uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
    with:
      #variables used for setting up the helm template variables
