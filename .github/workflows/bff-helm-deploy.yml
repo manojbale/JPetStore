@@ -6,39 +6,83 @@ name: BFF-HELM-DEPLOY
 on:
   workflow_dispatch:
    inputs:
-    image_tag: 
-     description: 'Provide specific version to deploy'
-     type: string
-     required: true
-     default: latest
-    region:
-      description: 'Select the region'
-      type: choice
+#POC environments
+    poc-eus2-blue:
+     type: boolean
+     description: 'deploy to poc-eus2-blue-test?'
+     required: false
+     default: false
+
+#DEV environments
+#---EUS2---
+    dev-eus2-blue-test:
+     type: boolean
+     description: 'deploy to dev-eus2-blue-test?'
+     required: false
+     default: false
+
+    dev-eus2-blue-int:
+     type: boolean
+     description: 'deploy to dev-eus2-blue-int?'
+     required: false
+     default: false
+#---SEASIA---
+    dev-seasia-blue-test:
+     type: boolean
+     description: 'deploy to dev-seasia-blue-test?'
+     required: false
+     default: false
+
+    dev-seasia-blue-int:
+     type: boolean
+     description: 'deploy to dev-seasia-blue-int?'
+     required: false
+     default: false
+#---WESTEU---
+    dev-westeu-blue-test:
+     type: boolean
+     description: 'deploy to dev-westeu-blue-test?'
+     required: false
+     default: false
+
+    dev-westeu-blue-int:
+     type: boolean
+     description: 'deploy to dev-westeu-blue-int?'
+     required: false
+     default: false
+
+#PROD environments
+#---EUS2---
+    prod-eus2-blue:
+      type: boolean
+      description: 'deploy to prod-eus2-blue?'
       required: false
-      options:
-        - eus2
-        - seasia
-        - westeu
-    environment:
-      description: 'Select the environment'
-      type: choice
-      required: false
-      options:
-        - poc
-        - dev
-        - prod
-    namespace:
-      description: 'Select the AKS cluster namespace'
-      type: choice
-      required: false
-      options:
-        - test
-        - int
+      default: false
+
+#---SEASIA---
+    prod-seasia-blue:
+     type: boolean
+     description: 'deploy to prod-seasia-blue?'
+     required: false
+     default: false
+ 
+#---WESTEU---
+    prod-westeu-blue:
+     type: boolean
+     description: 'deploy to prod-westeu-blue?'
+     required: false
+     default: false
+ 
+  push:
+    branches:
+      - master
+      - feature/CXF1337-41
 
 jobs:
+#POC jobs
  poc-eus2-blue-test:
-  if: ${{ github.event.inputs.environment.options == poc }} && ${{ github.event.inputs.region.options == eus2 }} && ${{ github.event.inputs.namespace.options == test }}
-  uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
+  if: ${{ inputs.poc-eus2-blue == true }} || ${{ github.event_name == 'push' }}
+  uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
   with:
     #variables used for setting up the helm template variables
     Cluster: poc
@@ -55,8 +99,8 @@ jobs:
     KUBE_CONFIG: /home/runner/.kube/config
 
  poc-eus2-blue-int:
-   if: ${{ github.event.inputs.environment.options == poc }} && ${{ github.event.inputs.region.options == eus2 }} && ${{ github.event.inputs.namespace.options == int }}
-   uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
+   if: ${{ inputs.poc-eus2-blue == true }} || ${{ github.event_name == 'push' }}
+   uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
    with:
      #variables used for setting up the helm template variables
      Cluster: poc
@@ -72,38 +116,169 @@ jobs:
      AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
      KUBE_CONFIG: /home/runner/.kube/config
 
+#DEV Jobs
  dev-eus2-blue-test:
-  if: ${{ github.event.inputs.environment.options == dev }} && ${{ github.event.inputs.region.options == eus2 }} && ${{ github.event.inputs.namespace.options == test }}
-  uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
+   if: ${{ inputs.dev-eus2-blue-test == true }}
+   uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
+   with:
+     #variables used for setting up the helm template variables
+     Cluster: dev
+     Namespace: myfinance-test
+     Region: eus2
+     deployment_name: myfinance-bff
+     environment_name: dev-eus2-blue-test
+     resource_group: rg-dev-eastus2-blue
+     cluster_name: aks-dscdev-eus2-blue
+     image_tag: latest
+     subscription_id: 94188215-a4e4-48dd-94b1-2ff74b484696
+   secrets:
+     AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+     KUBE_CONFIG: /home/runner/.kube/config
+ 
+ dev-eus2-blue-int:
+   if: ${{ inputs.dev-eus2-blue-int == true }}
+   uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
+   with:
+     #variables used for setting up the helm template variables
+     Cluster: dev
+     Namespace: myfinance-int
+     Region: eus2
+     deployment_name: myfinance-bff
+     environment_name: dev-eus2-blue-int
+     resource_group: rg-dev-eastus2-blue
+     cluster_name: aks-dscdev-eus2-blue
+     image_tag: latest
+     subscription_id: 94188215-a4e4-48dd-94b1-2ff74b484696
+   secrets:
+     AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+     KUBE_CONFIG: /home/runner/.kube/config
+
+ dev-seasia-blue-test:
+  if: ${{ inputs.dev-seasia-blue-test == true }}
+  uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
   with:
     #variables used for setting up the helm template variables
-    Cluster: poc
+    Cluster: dev
     Namespace: myfinance-test
-    Region: eus2
+    Region: seasia
     deployment_name: myfinance-bff
-    environment_name: poc-eus2-blue-test
-    resource_group: rg-poc-eastus2-blue
-    cluster_name: aks-dscpoc-eus2-blue
+    environment_name: dev-eus2-blue-test
+    resource_group: rg-dev-southeastasia-blue
+    cluster_name: aks-dscdev-seasia-blue
     image_tag: latest
-    subscription_id: f61bb119-e266-4de6-9db0-4c7a95a77d78
+    subscription_id: 94188215-a4e4-48dd-94b1-2ff74b484696
   secrets:
     AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
     KUBE_CONFIG: /home/runner/.kube/config
-
- dev-eus2-blue-int:
-   if: ${{ github.event.inputs.environment.options == dev }} && ${{ github.event.inputs.region.options == eus2 }} && ${{ github.event.inputs.namespace.options == int }}
-   uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
+    
+ dev-seasia-blue-int:
+   if: ${{ inputs.dev-seasia-blue-int == true }}
+   uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
    with:
      #variables used for setting up the helm template variables
-     Cluster: poc
+     Cluster: dev
      Namespace: myfinance-int
-     Region: eus2
+     Region: seasia
      deployment_name: myfinance-bff
-     environment_name: poc-eus2-blue-int
-     resource_group: rg-poc-eastus2-blue
-     cluster_name: aks-dscpoc-eus2-blue
+     environment_name: dev-eus2-blue-int
+     resource_group: rg-dev-southeastasia-blue
+     cluster_name: aks-dscdev-seasia-blue
      image_tag: latest
-     subscription_id: f61bb119-e266-4de6-9db0-4c7a95a77d78
+     subscription_id: 94188215-a4e4-48dd-94b1-2ff74b484696
    secrets:
      AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
      KUBE_CONFIG: /home/runner/.kube/config
+
+ dev-westeu-blue-test:
+  if: ${{ inputs.dev-westeu-blue-test == true }}
+  uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
+  with:
+    #variables used for setting up the helm template variables
+    Cluster: dev
+    Namespace: myfinance-test
+    Region: westeu
+    deployment_name: myfinance-bff
+    environment_name: dev-westeu-blue-test
+    resource_group: rg-dev-westeurope-blue
+    cluster_name: aks-dscdev-westeu-blue
+    image_tag: latest
+    subscription_id: 94188215-a4e4-48dd-94b1-2ff74b484696
+  secrets:
+    AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+    KUBE_CONFIG: /home/runner/.kube/config
+        
+ dev-westeu-blue-int:
+   if: ${{ inputs.dev-westeu-blue-int == true }}
+   uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
+   with:
+     #variables used for setting up the helm template variables
+     Cluster: dev
+     Namespace: myfinance-int
+     Region: westeu
+     deployment_name: myfinance-bff
+     environment_name: dev-westeu-blue-int
+     resource_group: rg-dev-westeurope-blue
+     cluster_name: aks-dscdev-westeu-blue
+     image_tag: latest
+     subscription_id: 94188215-a4e4-48dd-94b1-2ff74b484696
+   secrets:
+     AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+     KUBE_CONFIG: /home/runner/.kube/config
+
+#Prod Jobs
+#EUS2
+ prod-eus2-blue:
+   if: ${{ inputs.prod-eus2-blue == true }}
+   uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
+   with:
+     #variables used for setting up the helm template variables
+     Cluster: prod
+     Namespace: myfinance
+     Region: eus2
+     deployment_name: myfinance-bff
+     environment_name: prod-eus2-blue
+     resource_group: rg-prod-eastus2-blue
+     cluster_name: aks-dscprod-eus2-blue
+     image_tag: latest
+     subscription_id: 8f6a28e8-e647-4bdb-ba40-cbcbc034ef00
+   secrets:
+     AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+     KUBE_CONFIG: /home/runner/.kube/config
+
+#SEASIA     
+ prod-seasia-blue:
+   if: ${{ inputs.prod-seasia-blue == true }}
+   uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
+   with:
+     #variables used for setting up the helm template variables
+     Cluster: prod
+     Namespace: myfinance
+     Region: seasia
+     deployment_name: myfinance-bff
+     environment_name: prod-seasia-blue
+     resource_group: rg-prod-southeastasia-blue
+     cluster_name: aks-dscprod-seasia-blue
+     image_tag: latest
+     subscription_id: 8f6a28e8-e647-4bdb-ba40-cbcbc034ef00
+   secrets:
+     AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+     KUBE_CONFIG: /home/runner/.kube/config
+
+#WESTEU     
+ prod-westeu-blue:
+  if: ${{ inputs.prod-westeu-blue == true }}
+  uses: cx-factory/cx-terraform-azure/.github/workflows/bff-helm-deploy-template.yml@feature/CXF1337-41
+  with:
+    #variables used for setting up the helm template variables
+    Cluster: prod
+    Namespace: myfinance
+    Region: westeu
+    deployment_name: myfinance-bff
+    environment_name: prod-westeu-blue
+    resource_group: rg-prod-westeurope-blue
+    cluster_name: aks-dscprod-westeu-blue
+    image_tag: latest
+    subscription_id: 8f6a28e8-e647-4bdb-ba40-cbcbc034ef00
+  secrets:
+    AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+    KUBE_CONFIG: /home/runner/.kube/config

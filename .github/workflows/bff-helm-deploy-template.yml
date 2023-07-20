@@ -39,24 +39,22 @@ on:
 
 jobs: 
  bff-helm-deploy:
-    runs-on: [ ubuntu-latest ]
+    runs-on: [ self-hosted, Linux, X64, road-runner ]
     environment: ${{ inputs.environment_name }}
     steps:
       - uses: actions/checkout@v2
         name: source code checkout
       - uses: azure/login@v1
-        if: false
         name: Azure login using service principle
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           allow-no-subscriptions: true
-      - name: Verify the login and azcli, helm version
+      - name: Verify the login and azcli, helm versio
         run: |
           az --version
           helm version
           az account show
       - name: Get the AKS credentials
-        if: false
         run: |
           az account show
           az account set --subscription=${{ inputs.subscription_id }}
@@ -66,7 +64,6 @@ jobs:
     
 
       - name: Get_current_imagetag
-        if: false
         run: | 
          kubectl config set-context --current --namespace ${{ inputs.Namespace }}
          imagetag=$(kubectl get deployment ${{ inputs.deployment_name }} -o=jsonpath='{$.spec.template.spec.containers[:1].image}')
@@ -82,12 +79,10 @@ jobs:
         continue-on-error: true
 
       - name: "print bffImageTag"
-        if: false
         run: |
               echo "Output is ${{steps.imagetag.outputs.bffImageTag}}"
  
       - name: "Set_Helm_Variables"
-        if: false
         id: helmvar
         run: |
           echo "Cluster: ${{ inputs.Cluster }}"
@@ -256,39 +251,38 @@ jobs:
           fi
      
       - name: helmdeploy_myfinance-bff_chart
-        if: false
         run: |
          helm upgrade myfinance-bff devops/charts/ --install --force --wait --namespace=${{ inputs.Namespace }} \
-          --set environment.name=${{ inputs.Cluster }} \
-          --set appLabel=myfinance-bff \
-          --set replicaCount=${{ steps.helmvar.outputs.replicaCount }} \
-          --set nodepool=${{ steps.helmvar.outputs.nodepool }} \
-          --set image.repository=${{ steps.helmvar.outputs.imagerepository }} \
-          --set image.tag=${{ steps.imagetag.outputs.bffImageTag }} \
-          --set resources.limits.cpu=2 \
-          --set resources.limits.memory="512Mi" \
-          --set resources.requests.cpu=0.5 \
-          --set resources.requests.memory="256Mi" \
-          --set autoscaling.minReplicas=${{ steps.helmvar.outputs.minReplicas }} \
-          --set autoscaling.maxReplicas=${{ steps.helmvar.outputs.maxReplicas }} \
-          --set autoscaling.targetCPUUtilizationPercentage=75 \
-          --set autoscaling.targetMemoryUtilizationPercentage=75 \
-          --set ingress.fdenabled=${{ steps.helmvar.outputs.fdenabled }} \
-          --set "ingress.hosts[0].host=${{ steps.helmvar.outputs.host }}" \
-          --set "ingress.hosts[0].paths[0].path=${{ steps.helmvar.outputs.ingressHostMetricPath }}" \
-          --set "ingress.hosts[0].paths[0].pathType=ImplementationSpecific" \
-          --set "ingress.hosts[0].paths[1].path=${{ steps.helmvar.outputs.ingressHostApplicationPath }}" \
-          --set "ingress.hosts[0].paths[1].pathType=ImplementationSpecific" \
-          --set SecretProviderClass.secret.configSecretobjects.objectName=${{ steps.helmvar.outputs.configSecretObjectName }} \
-          --set SecretProviderClass.secret.configSecretobjects.objectAlias=.env \
-          --set SecretProviderClass.secret.configSecretobjects.objectType=secret \
-          --set SecretProviderClass.secret.tlsSecretobjects.objectName=${{ steps.helmvar.outputs.tlsSecretObjectName }} \
-          --set SecretProviderClass.secret.tlsSecretobjects.objectType=secret \
-          --set SecretProviderClass.parameters.keyvaultName=${{ steps.helmvar.outputs.keyVaultName }} \
-          --set SecretProviderClass.parameters.userAssignedIdentityID=${{ steps.helmvar.outputs.userAssignedIdentityID }} \
-          --set SecretProviderClass.parameters.tenantId=9652d7c2-1ccf-4940-8151-4a92bd474ed0 \
-          --set tlsDomain=${{ steps.helmvar.outputs.host }} \
-          --set datadog.apm.env=${{ steps.helmvar.outputs.ddapmenv }} \
-          --set datadog.apm.svc=${{ steps.helmvar.outputs.ddapmsvc }} \
+         --set environment.name=${{ inputs.Cluster }} \
+         --set appLabel=myfinance-bff \
+         --set replicaCount=${{ steps.helmvar.outputs.replicaCount }} \
+         --set nodepool=${{ steps.helmvar.outputs.nodepool }} \
+         --set image.repository=${{ steps.helmvar.outputs.imagerepository }} \
+         --set image.tag=${{ steps.imagetag.outputs.bffImageTag }} \
+         --set resources.limits.cpu=2 \
+         --set resources.limits.memory="512Mi" \
+         --set resources.requests.cpu=0.5 \
+         --set resources.requests.memory="256Mi" \
+         --set autoscaling.minReplicas=${{ steps.helmvar.outputs.minReplicas }} \
+         --set autoscaling.maxReplicas=${{ steps.helmvar.outputs.maxReplicas }} \
+         --set autoscaling.targetCPUUtilizationPercentage=75 \
+         --set autoscaling.targetMemoryUtilizationPercentage=75 \
+         --set ingress.fdenabled=${{ steps.helmvar.outputs.fdenabled }} \
+         --set "ingress.hosts[0].host=${{ steps.helmvar.outputs.host }}" \
+         --set "ingress.hosts[0].paths[0].path=${{ steps.helmvar.outputs.ingressHostMetricPath }}" \
+         --set "ingress.hosts[0].paths[0].pathType=ImplementationSpecific" \
+         --set "ingress.hosts[0].paths[1].path=${{ steps.helmvar.outputs.ingressHostApplicationPath }}" \
+         --set "ingress.hosts[0].paths[1].pathType=ImplementationSpecific" \
+         --set SecretProviderClass.secret.configSecretobjects.objectName=${{ steps.helmvar.outputs.configSecretObjectName }} \
+         --set SecretProviderClass.secret.configSecretobjects.objectAlias=.env \
+         --set SecretProviderClass.secret.configSecretobjects.objectType=secret \
+         --set SecretProviderClass.secret.tlsSecretobjects.objectName=${{ steps.helmvar.outputs.tlsSecretObjectName }} \
+         --set SecretProviderClass.secret.tlsSecretobjects.objectType=secret \
+         --set SecretProviderClass.parameters.keyvaultName=${{ steps.helmvar.outputs.keyVaultName }} \
+         --set SecretProviderClass.parameters.userAssignedIdentityID=${{ steps.helmvar.outputs.userAssignedIdentityID }} \
+         --set SecretProviderClass.parameters.tenantId=9652d7c2-1ccf-4940-8151-4a92bd474ed0 \
+         --set tlsDomain=${{ steps.helmvar.outputs.host }} \
+         --set datadog.apm.env=${{ steps.helmvar.outputs.ddapmenv }} \
+         --set datadog.apm.svc=${{ steps.helmvar.outputs.ddapmsvc }} \
         env:  
           KUBECONFIG: ${{ secrets.KUBE_CONFIG }}
