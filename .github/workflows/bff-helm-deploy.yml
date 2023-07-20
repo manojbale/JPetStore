@@ -11,33 +11,33 @@ on:
      type: string
      required: true
      default: latest
-    poc-eus2-blue-test:
-     type: boolean
-     description: 'deploy to poc-eus2-blue-test?'
-     required: false
-     default: false
-
-    poc-eus2-blue-int:
-     type: boolean
-     description: 'deploy to poc-eus2-blue-int?'
-     required: false
-     default: false
-
-    dev-eus2-blue-test:
-     type: boolean
-     description: 'deploy to dev-eus2-blue-test?'
-     required: false
-     default: false
-
-    dev-eus2-blue-int:
-     type: boolean
-     description: 'deploy to dev-eus2-blue-int?'
-     required: false
-     default: false
+    region:
+      description: 'Select the region'
+      type: choice
+      required: false
+      options:
+        - eus2
+        - seasia
+        - westeu
+    environment:
+      description: 'Select the environment'
+      type: choice
+      required: false
+      options:
+        - poc
+        - dev
+        - prod
+    namespace:
+      description: 'Select the AKS cluster namespace'
+      type: choice
+      required: false
+      options:
+        - test
+        - int
 
 jobs:
  poc-eus2-blue-test:
-  if: ${{ inputs.poc-eus2-blue-test == true }}
+  if: ${{ inputs.environment == 'poc' }} && ${{ inputs.region == 'eus2' }} && ${{ inputs.namespace == 'test' }}
   uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
   with:
     #variables used for setting up the helm template variables
@@ -55,7 +55,7 @@ jobs:
     KUBE_CONFIG: /home/runner/.kube/config
 
  poc-eus2-blue-int:
-   if: ${{ inputs.poc-eus2-blue-int == true }}
+   if: ${{ inputs.environment == 'poc' }} && ${{ inputs.region == 'eus2' }} && ${{ inputs.namespace == 'int' }}
    uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
    with:
      #variables used for setting up the helm template variables
@@ -73,7 +73,7 @@ jobs:
      KUBE_CONFIG: /home/runner/.kube/config
 
  dev-eus2-blue-test:
-  if: ${{ inputs.dev-eus2-blue-test == true }}
+  if: ${{ inputs.environment == 'dev' }} && ${{ inputs.region == 'eus2' }} && ${{ inputs.namespace == 'test' }}
   uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
   with:
     #variables used for setting up the helm template variables
@@ -91,7 +91,7 @@ jobs:
     KUBE_CONFIG: /home/runner/.kube/config
 
  dev-eus2-blue-int:
-   if: ${{ inputs.dev-eus2-blue-int == true }}
+   if: ${{ inputs.environment == 'dev' }} && ${{ inputs.region == 'eus2' }} && ${{ inputs.namespace == 'int' }}
    uses: manojbale/JPetStore/.github/workflows/bff-helm-deploy-template.yml@master
    with:
      #variables used for setting up the helm template variables
