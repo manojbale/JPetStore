@@ -56,7 +56,7 @@ extra
     <site>
       <id>gh-pages</id>
       <name>Mybatis GitHub Pages</name>
-      <url>git:ssh://git@github.com/mybatis/jpetstore-6.git?gh-pages#</url>
+      <url>git:ssh://git@github.com/manojbale/JPetStore.git?gh-pages#</url>
     </site>
   </distributionManagement>
 
